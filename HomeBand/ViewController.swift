@@ -7,9 +7,14 @@
 //
 
 import UIKit
+import Alamofire
+
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var tfLogin: UITextField!
+    @IBOutlet weak var tfPassword: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -20,6 +25,27 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    @IBAction func onClickConnexion(_ sender: Any) {
+        //let login: String! = tfLogin.text
+        //let password: String! = tfPassword.text
+        
+        let url : String! = "http://localhost/homeband-api/api/villes"
+        Alamofire.request(url, method: .get)
+            .responseJSON { response in
+                if(response.result.isSuccess){
+                    let resultat = response.result.value as! [String:Any]
+                    let listeVilles : [Ville] = resultat["liste"] as! Array<Ville>
+                   
+                    listeVilles.forEach{ ville in
+                        debugPrint(ville.nom)
+                    }
+                    
+                } else {
+                    print("Erreur lors de l'appel à l'API !")
+                }
+                
+        }
+    }
+    
 }
 
