@@ -8,7 +8,8 @@
 
 import UIKit
 import Alamofire
-
+import ObjectMapper
+import AlamofireObjectMapper
 
 class ViewController: UIViewController {
 
@@ -34,12 +35,11 @@ class ViewController: UIViewController {
             .responseJSON { response in
                 if(response.result.isSuccess){
                     let resultat = response.result.value as! [String:Any]
-                    let listeVilles : [Ville] = resultat["liste"] as! Array<Ville>
-                   
-                    listeVilles.forEach{ ville in
+                    let liste = Mapper<Ville>().mapArray(JSONObject: resultat["liste"])
+                    
+                    liste?.forEach{ ville in
                         debugPrint(ville.nom)
                     }
-                    
                 } else {
                     print("Erreur lors de l'appel à l'API !")
                 }

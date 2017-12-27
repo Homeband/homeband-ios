@@ -7,8 +7,10 @@
 //
 
 import Foundation
+import ObjectMapper
+import AlamofireObjectMapper
 
-class Groupe {
+class Groupe : Mappable {
     var id_groupes: Int = 0
     var nom: String = ""
     var login: String = ""
@@ -28,4 +30,28 @@ class Groupe {
     var id_style: Int = 0
     var id_villes: Int = 0
     
+    required init?(map: Map){
+        
+    }
+    
+    func mapping(map: Map) {
+        id_groupes <- map["id_groupes"]
+        nom <- map["nom"]
+        login <- map["login"]
+        mot_de_passe <- map["mot_de_passe"]
+        email <- map["email"]
+        biographie <- map["biographie"]
+        contacts <- map["contacts"]
+        lien_itunes <- map["lien_itunes"]
+        lien_youtube <- map["lien_youtube"]
+        lien_spotify <- map["lien_spotify"]
+        lien_soundcloud <- map["lien_soundcloud"]
+        lien_bandcamp <- map["lien_bandcamp"]
+        lien_twitter <- map["lien_twitter"]
+        lien_instagram <- map["lien_instagram"]
+        lien_facebook <- map["lien_facebook"]
+        est_actif <- map["est_actif"]
+        id_style <- map["id_style"]
+        id_villes <- map["id_villes"]
+    }
 }

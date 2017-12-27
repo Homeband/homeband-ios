@@ -7,11 +7,23 @@
 //
 
 import Foundation
+import ObjectMapper
+import AlamofireObjectMapper
 
-class Ville : NSObject {
+class Ville : Mappable {
     var id_villes :Int = 0
     var nom :String = ""
     var code_postal :String = ""
     var est_actif :Bool = false
     
+    required init?(map: Map) {
+        
+    }
+    
+    func mapping(map: Map) {
+        id_villes <- map["id_villes"]
+        nom <- map["nom"]
+        code_postal <- map["code_postal"]
+        est_actif <- map["est_actif"]
+    }
 }
