@@ -9,33 +9,35 @@
 import Foundation
 import ObjectMapper
 import AlamofireObjectMapper
+import RealmSwift
 
-class Groupe : Mappable {
-    var id_groupes: Int = 0
-    var nom: String = ""
-    var login: String = ""
-    var mot_de_passe: String = ""
-    var email: String = ""
-    var biographie: String = ""
-    var contacts: String = ""
-    var lien_itunes: String = ""
-    var lien_youtube: String = ""
-    var lien_spotify: String = ""
-    var lien_soundcloud: String = ""
-    var lien_bandcamp: String = ""
-    var lien_twitter: String = ""
-    var lien_instagram: String = ""
-    var lien_facebook: String = ""
-    var est_actif: Bool = false
-    var id_style: Int = 0
-    var id_villes: Int = 0
+class Groupe : Object,Mappable {
+  @objc dynamic var id_groupes: Int = 0
+  @objc dynamic var nom: String = ""
+  @objc dynamic var login: String = ""
+  @objc dynamic var mot_de_passe: String = ""
+  @objc dynamic var email: String = ""
+  @objc dynamic var biographie: String = ""
+  @objc dynamic var contacts: String = ""
+  @objc dynamic var lien_itunes: String = ""
+  @objc dynamic var lien_youtube: String = ""
+  @objc dynamic var lien_spotify: String = ""
+  @objc dynamic var lien_soundcloud: String = ""
+  @objc dynamic var lien_bandcamp: String = ""
+  @objc dynamic var lien_twitter: String = ""
+  @objc dynamic var lien_instagram: String = ""
+  @objc dynamic var lien_facebook: String = ""
+  @objc dynamic var est_actif: Bool = false
+  @objc dynamic var id_style: Int = 0
+  @objc dynamic var id_villes: Int = 0
+  @objc dynamic var api_ck: String = ""
     
-    required init?(map: Map){
-        
+    required convenience init?(map: Map){
+        self.init()
     }
     
     func mapping(map: Map) {
-        id_groupes <- map["id_groupes"]
+        id_groupes <- (map["id_groupes"], IntTransform())
         nom <- map["nom"]
         login <- map["login"]
         mot_de_passe <- map["mot_de_passe"]
@@ -50,8 +52,9 @@ class Groupe : Mappable {
         lien_twitter <- map["lien_twitter"]
         lien_instagram <- map["lien_instagram"]
         lien_facebook <- map["lien_facebook"]
-        est_actif <- map["est_actif"]
-        id_style <- map["id_style"]
-        id_villes <- map["id_villes"]
+        est_actif <- (map["est_actif"], BooleanTransform())
+        id_style <- (map["id_style"], IntTransform())
+        id_villes <- (map["id_villes"], IntTransform())
+        api_ck <- map["api_ck"]
     }
 }

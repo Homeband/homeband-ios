@@ -7,8 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		990DC2C01FFC31C800D43945 /* Transforms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990DC2BF1FFC31C800D43945 /* Transforms.swift */; };
 		991F0C3E1FCF4EBB0010ABC5 /* Groupe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991F0C3D1FCF4EBB0010ABC5 /* Groupe.swift */; };
 		991F0C401FCF50210010ABC5 /* Ville.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991F0C3F1FCF50210010ABC5 /* Ville.swift */; };
+		9977F5E51FF82B7C0034EB9C /* Utilisateur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9977F5E41FF82B7C0034EB9C /* Utilisateur.swift */; };
+		9977F5E71FF82C1F0034EB9C /* Adresse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9977F5E61FF82C1F0034EB9C /* Adresse.swift */; };
+		9977F5E91FF82C4A0034EB9C /* Avis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9977F5E81FF82C4A0034EB9C /* Avis.swift */; };
+		9977F5EB1FF82C630034EB9C /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9977F5EA1FF82C630034EB9C /* Album.swift */; };
+		9977F5ED1FF82C6D0034EB9C /* Titre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9977F5EC1FF82C6D0034EB9C /* Titre.swift */; };
+		9977F5EF1FF82C890034EB9C /* Evenement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9977F5EE1FF82C890034EB9C /* Evenement.swift */; };
+		9977F5F11FF82C930034EB9C /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9977F5F01FF82C930034EB9C /* Style.swift */; };
+		9977F5F31FF82CA30034EB9C /* Membre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9977F5F21FF82CA30034EB9C /* Membre.swift */; };
+		9977F5F51FF8327F0034EB9C /* DetailEvenement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9977F5F41FF8327F0034EB9C /* DetailEvenement.swift */; };
+		9977F5F71FF8334E0034EB9C /* UtilisateurGroupe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9977F5F61FF8334E0034EB9C /* UtilisateurGroupe.swift */; };
 		99D8CC7F1FBD7C1700ACE437 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D8CC7E1FBD7C1700ACE437 /* AppDelegate.swift */; };
 		99D8CC811FBD7C1700ACE437 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D8CC801FBD7C1700ACE437 /* ViewController.swift */; };
 		99D8CC841FBD7C1700ACE437 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99D8CC821FBD7C1700ACE437 /* Main.storyboard */; };
@@ -36,8 +47,19 @@
 		0FEDCD62124F586F9B599EB8 /* Pods-HomeBand.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeBand.release.xcconfig"; path = "Pods/Target Support Files/Pods-HomeBand/Pods-HomeBand.release.xcconfig"; sourceTree = "<group>"; };
 		2DE08CAABDD6E33A60A569BC /* Pods-HomeBand.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeBand.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HomeBand/Pods-HomeBand.debug.xcconfig"; sourceTree = "<group>"; };
 		4C839F648693ED31B6ED3B85 /* Pods_HomeBand.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HomeBand.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		990DC2BF1FFC31C800D43945 /* Transforms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transforms.swift; sourceTree = "<group>"; };
 		991F0C3D1FCF4EBB0010ABC5 /* Groupe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Groupe.swift; sourceTree = "<group>"; };
 		991F0C3F1FCF50210010ABC5 /* Ville.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ville.swift; sourceTree = "<group>"; };
+		9977F5E41FF82B7C0034EB9C /* Utilisateur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilisateur.swift; sourceTree = "<group>"; };
+		9977F5E61FF82C1F0034EB9C /* Adresse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Adresse.swift; sourceTree = "<group>"; };
+		9977F5E81FF82C4A0034EB9C /* Avis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Avis.swift; sourceTree = "<group>"; };
+		9977F5EA1FF82C630034EB9C /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		9977F5EC1FF82C6D0034EB9C /* Titre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Titre.swift; sourceTree = "<group>"; };
+		9977F5EE1FF82C890034EB9C /* Evenement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Evenement.swift; sourceTree = "<group>"; };
+		9977F5F01FF82C930034EB9C /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
+		9977F5F21FF82CA30034EB9C /* Membre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Membre.swift; sourceTree = "<group>"; };
+		9977F5F41FF8327F0034EB9C /* DetailEvenement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailEvenement.swift; sourceTree = "<group>"; };
+		9977F5F61FF8334E0034EB9C /* UtilisateurGroupe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilisateurGroupe.swift; sourceTree = "<group>"; };
 		99D8CC7B1FBD7C1700ACE437 /* HomeBand.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeBand.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99D8CC7E1FBD7C1700ACE437 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		99D8CC801FBD7C1700ACE437 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -70,11 +92,29 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		990DC2BE1FFC31B500D43945 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				990DC2BF1FFC31C800D43945 /* Transforms.swift */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
 		991F0C3C1FCF4E9D0010ABC5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				991F0C3D1FCF4EBB0010ABC5 /* Groupe.swift */,
 				991F0C3F1FCF50210010ABC5 /* Ville.swift */,
+				9977F5E41FF82B7C0034EB9C /* Utilisateur.swift */,
+				9977F5E61FF82C1F0034EB9C /* Adresse.swift */,
+				9977F5E81FF82C4A0034EB9C /* Avis.swift */,
+				9977F5EA1FF82C630034EB9C /* Album.swift */,
+				9977F5EC1FF82C6D0034EB9C /* Titre.swift */,
+				9977F5EE1FF82C890034EB9C /* Evenement.swift */,
+				9977F5F01FF82C930034EB9C /* Style.swift */,
+				9977F5F21FF82CA30034EB9C /* Membre.swift */,
+				9977F5F41FF8327F0034EB9C /* DetailEvenement.swift */,
+				9977F5F61FF8334E0034EB9C /* UtilisateurGroupe.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -100,6 +140,7 @@
 		99D8CC7D1FBD7C1700ACE437 /* HomeBand */ = {
 			isa = PBXGroup;
 			children = (
+				990DC2BE1FFC31B500D43945 /* Tools */,
 				991F0C3C1FCF4E9D0010ABC5 /* Models */,
 				99D8CC931FBD7C6100ACE437 /* Images */,
 				99D8CC7E1FBD7C1700ACE437 /* AppDelegate.swift */,
@@ -245,12 +286,16 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -264,9 +309,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9977F5F31FF82CA30034EB9C /* Membre.swift in Sources */,
+				9977F5F71FF8334E0034EB9C /* UtilisateurGroupe.swift in Sources */,
+				9977F5ED1FF82C6D0034EB9C /* Titre.swift in Sources */,
+				9977F5E91FF82C4A0034EB9C /* Avis.swift in Sources */,
 				99D8CC811FBD7C1700ACE437 /* ViewController.swift in Sources */,
+				9977F5EF1FF82C890034EB9C /* Evenement.swift in Sources */,
+				9977F5E51FF82B7C0034EB9C /* Utilisateur.swift in Sources */,
 				991F0C3E1FCF4EBB0010ABC5 /* Groupe.swift in Sources */,
 				991F0C401FCF50210010ABC5 /* Ville.swift in Sources */,
+				9977F5F11FF82C930034EB9C /* Style.swift in Sources */,
+				990DC2C01FFC31C800D43945 /* Transforms.swift in Sources */,
+				9977F5EB1FF82C630034EB9C /* Album.swift in Sources */,
+				9977F5F51FF8327F0034EB9C /* DetailEvenement.swift in Sources */,
+				9977F5E71FF82C1F0034EB9C /* Adresse.swift in Sources */,
 				99D8CC7F1FBD7C1700ACE437 /* AppDelegate.swift in Sources */,
 				99D8CC871FBD7C1700ACE437 /* HomeBand.xcdatamodeld in Sources */,
 			);
@@ -411,7 +467,7 @@
 				DEVELOPMENT_TEAM = MNU797DKUS;
 				INFOPLIST_FILE = HomeBand/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = be.heh.HomeBand;
+				PRODUCT_BUNDLE_IDENTIFIER = be.heh.homeband.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -428,7 +484,7 @@
 				DEVELOPMENT_TEAM = MNU797DKUS;
 				INFOPLIST_FILE = HomeBand/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = be.heh.HomeBand;
+				PRODUCT_BUNDLE_IDENTIFIER = be.heh.homeband.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
