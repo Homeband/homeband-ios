@@ -7,5 +7,6 @@ target 'HomeBand' do
 
   # Pods for HomeBand
   pod 'AlamofireObjectMapper', '~> 5.0'
+  pod 'RealmSwift'
 
 end
