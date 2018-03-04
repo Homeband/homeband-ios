@@ -8,6 +8,9 @@
 
 import UIKit
 import CoreData
+import IQKeyboardManagerSwift
+import Realm
+import RealmSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,6 +20,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        initIQKeyboard()
+        
+        // Configuration de Realm
+        let config = Realm.Configuration(
+            schemaVersion: 2,
+            migrationBlock: { migration, oldSchemaVersion in
+                // We haven’t migrated anything yet, so oldSchemaVersion == 0
+                if (oldSchemaVersion < 1) {
+                    // Nothing to do!
+                    // Realm will automatically detect new properties and removed properties
+                    // And will update the schema on disk automatically
+                }
+        })
+        
+        Realm.Configuration.defaultConfiguration = config
+        
+        let connectedUser: Utilisateur? = Tools.getConnectedUser()
+        if(connectedUser != nil){
+            let storyboard = UIStoryboard.init(name: "Home", bundle: nil)
+            let nav = storyboard.instantiateInitialViewController()
+            
+            self.window?.rootViewController = nav
+        }
+        
         return true
     }
 
@@ -87,6 +115,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
         }
+    }
+    
+    // MARK: - IQKeyboard Customization
+    
+    func initIQKeyboard(){
+        // Activation du module
+        IQKeyboardManager.sharedManager().enable = true
+        
+        // Couleur des boutons de toolbars
+        IQKeyboardManager.sharedManager().toolbarTintColor = UIColor.hbRed
+        
+        // Texte du bouton valider
+        IQKeyboardManager.sharedManager().toolbarDoneBarButtonItemText = "Valider"
+        
+        //
     }
 
 }

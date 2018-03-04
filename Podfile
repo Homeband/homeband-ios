@@ -7,6 +7,8 @@ target 'HomeBand' do
 
   # Pods for HomeBand
   pod 'AlamofireObjectMapper', '~> 5.0'
+  pod 'AlamofireImage', '~> 3.3'
   pod 'RealmSwift'
+  pod 'IQKeyboardManagerSwift', '5.0.0'
 
 end

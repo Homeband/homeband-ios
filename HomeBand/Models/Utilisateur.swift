@@ -20,6 +20,7 @@ class Utilisateur : Object,Mappable {
     @objc dynamic var prenom: String = ""
     @objc dynamic var est_actif: Bool = false
     @objc dynamic var api_ck: String = ""
+    @objc dynamic var est_connecte: Bool = false
     @objc dynamic var id_adresses: Int = 0
     
     required convenience init?(map: Map) {

@@ -12,14 +12,17 @@ import AlamofireObjectMapper
 import RealmSwift
 
 class DetailEvenement : Object,Mappable {
-  @objc dynamic var id_detail_evenement: Int = 0
-  @objc dynamic var date_heure: Date = Date()
-  @objc dynamic var est_description_perso: Bool = false
-  @objc dynamic var desc: String = ""
-  @objc dynamic var prix: Double = 0.0
-  @objc dynamic var id_evenemnents: Int = 0
-  @objc dynamic var id_adresses: Int = 0
-  @objc dynamic var est_actif: Bool = true
+    @objc dynamic var id_detail_evenement: Int = 0
+    @objc dynamic var date_heure: Date = Date()
+    @objc dynamic var est_description_perso: Bool = false
+    @objc dynamic var desc: String = ""
+    @objc dynamic var prix: Double = 0.0
+    @objc dynamic var date_maj: String = ""
+    @objc dynamic var illustration: Data = Data()
+    @objc dynamic var lien_facebook: String = ""
+    @objc dynamic var id_evenemnents: Int = 0
+    @objc dynamic var id_adresses: Int = 0
+    @objc dynamic var est_actif: Bool = true
     
     required convenience init?(map: Map){
         self.init()

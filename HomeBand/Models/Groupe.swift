@@ -12,25 +12,27 @@ import AlamofireObjectMapper
 import RealmSwift
 
 class Groupe : Object,Mappable {
-  @objc dynamic var id_groupes: Int = 0
-  @objc dynamic var nom: String = ""
-  @objc dynamic var login: String = ""
-  @objc dynamic var mot_de_passe: String = ""
-  @objc dynamic var email: String = ""
-  @objc dynamic var biographie: String = ""
-  @objc dynamic var contacts: String = ""
-  @objc dynamic var lien_itunes: String = ""
-  @objc dynamic var lien_youtube: String = ""
-  @objc dynamic var lien_spotify: String = ""
-  @objc dynamic var lien_soundcloud: String = ""
-  @objc dynamic var lien_bandcamp: String = ""
-  @objc dynamic var lien_twitter: String = ""
-  @objc dynamic var lien_instagram: String = ""
-  @objc dynamic var lien_facebook: String = ""
-  @objc dynamic var est_actif: Bool = false
-  @objc dynamic var id_style: Int = 0
-  @objc dynamic var id_villes: Int = 0
-  @objc dynamic var api_ck: String = ""
+    @objc dynamic var id_groupes: Int = 0
+    @objc dynamic var nom: String = ""
+    @objc dynamic var login: String = ""
+    @objc dynamic var mot_de_passe: String = ""
+    @objc dynamic var email: String = ""
+    @objc dynamic var biographie: String = ""
+    @objc dynamic var contacts: String = ""
+    @objc dynamic var lien_itunes: String = ""
+    @objc dynamic var lien_youtube: String = ""
+    @objc dynamic var lien_spotify: String = ""
+    @objc dynamic var lien_soundcloud: String = ""
+    @objc dynamic var lien_bandcamp: String = ""
+    @objc dynamic var lien_twitter: String = ""
+    @objc dynamic var lien_instagram: String = ""
+    @objc dynamic var lien_facebook: String = ""
+    @objc dynamic var date_maj: String = ""
+    @objc dynamic var illustration: Data = Data()
+    @objc dynamic var est_actif: Bool = false
+    @objc dynamic var id_style: Int = 0
+    @objc dynamic var id_villes: Int = 0
+    @objc dynamic var api_ck: String = ""
     
     required convenience init?(map: Map){
         self.init()
