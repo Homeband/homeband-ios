@@ -5,6 +5,7 @@ PODS:
   - AlamofireObjectMapper (5.0.0):
     - Alamofire (~> 4.1)
     - ObjectMapper (~> 3.0)
+  - CryptoSwift (0.8.0)
   - IQKeyboardManagerSwift (5.0.0)
   - ObjectMapper (3.1.0)
   - Realm (3.0.2):
@@ -16,6 +17,7 @@ PODS:
 DEPENDENCIES:
   - AlamofireImage (~> 3.3)
   - AlamofireObjectMapper (~> 5.0)
+  - CryptoSwift
   - IQKeyboardManagerSwift (= 5.0.0)
   - RealmSwift
 
@@ -23,11 +25,12 @@ SPEC CHECKSUMS:
   Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
   AlamofireImage: 2e784dc5d00f04903a52c1d169181469c805c3df
   AlamofireObjectMapper: 5fafc816351cbbc0d486611aaeba7461c0cbad49
+  CryptoSwift: f81907430ebbe38b8404b4f6fb40f3c576a8755f
   IQKeyboardManagerSwift: 3f340202ebe1a7076279b9b9b3c817243ddb3aab
   ObjectMapper: 20505058f54e5c3ca69e1d6de9897d152a5369a6
   Realm: 6f23fd1f178a09342eac21bfa7c2bf4312a7a180
   RealmSwift: 695393add1b8f9d5fa75dd16e6355cf3935f71e2
 
-PODFILE CHECKSUM: b097b2e0b88746a119e655df6084d1b5225bd6c2
+PODFILE CHECKSUM: 6228f450c1971b151425b0370ae8b40238291598
 
 COCOAPODS: 1.3.1

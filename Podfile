@@ -10,5 +10,6 @@ target 'HomeBand' do
   pod 'AlamofireImage', '~> 3.3'
   pod 'RealmSwift'
   pod 'IQKeyboardManagerSwift', '5.0.0'
+  pod 'CryptoSwift'
 
 end
