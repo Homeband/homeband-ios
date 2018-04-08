@@ -14,7 +14,9 @@ import AlamofireObjectMapper
 import RealmSwift
 
 class HomeController: UIViewController{
+    
     override func viewDidLoad() {
-        print("Ouverture Home")
+        Tools.checkStylesUpdate(update: false, displayAlert: true)
+        print(Tools.getHeaders())
     }
 }
