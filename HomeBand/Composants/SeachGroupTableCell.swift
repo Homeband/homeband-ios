@@ -14,7 +14,6 @@ class SearchGroupTableCell : UITableViewCell{
     @IBOutlet weak var imgIllustration: UIImageView!
     @IBOutlet weak var lbNom: UILabel!
     @IBOutlet weak var lbVille: UILabel!
-    @IBOutlet weak var lbStyle: UILabel!
     
     
 }
