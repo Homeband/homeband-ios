@@ -10,7 +10,15 @@ import Foundation
 import Alamofire
 
 class Connectivity {
-    class func isConnectedInternet()->Bool{
+    class func isConnectedToInternet()->Bool{
         return NetworkReachabilityManager()!.isReachable
+    }
+    
+    class func isConnectedByWifi()->Bool{
+        return NetworkReachabilityManager()!.isReachableOnEthernetOrWiFi
+    }
+    
+    class func isConnectedByData()->Bool{
+        return NetworkReachabilityManager()!.isReachableOnWWAN
     }
 }
