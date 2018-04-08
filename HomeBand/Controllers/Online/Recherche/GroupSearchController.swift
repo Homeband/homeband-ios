@@ -21,7 +21,6 @@ class GroupSearchController: UITableViewController{
     // MARK : Variables visuelles
     @IBOutlet weak var lbNomGroupe: UILabel!
     @IBOutlet weak var lbVilleGroupe: UILabel!
-    @IBOutlet weak var lbStyleGroupe: UILabel!
     
     var searchParams: Parameters = Parameters()
     var groupes: [Groupe]!
@@ -48,7 +47,6 @@ class GroupSearchController: UITableViewController{
         
         cell.lbNom.text = group.nom
         cell.lbVille.text = "Châtelineau"
-        cell.lbStyle.text = "Rock"
         
         let urlImage = "https://yt3.ggpht.com/pHwZj3tkgC3SJFbuqebBoT7WtVcIwAijEmcbe9VDCauv9ZlG6uS2zjvZQUSO7SfFqa3xjYqGp_L4QbM7=s900-mo-c-c0xffffffff-rj-k-no"
         

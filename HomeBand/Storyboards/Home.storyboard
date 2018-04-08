@@ -312,6 +312,7 @@
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pzJ-JS-kEQ">
                                             <rect key="frame" x="7" y="5" width="88" height="88"/>
                                             <constraints>
+                                                <constraint firstAttribute="width" constant="88" id="Q8l-dq-2p5"/>
                                                 <constraint firstAttribute="width" secondItem="pzJ-JS-kEQ" secondAttribute="height" multiplier="1:1" id="p6M-7u-iY5"/>
                                             </constraints>
                                         </imageView>
@@ -319,12 +320,6 @@
                                             <rect key="frame" x="103" y="5" width="133" height="22"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                             <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Style" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ifJ-KM-oOD">
-                                            <rect key="frame" x="103" y="53" width="194" height="20"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                            <color key="textColor" name="systemGrayColor" catalog="System" colorSpace="catalog"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text="Ville" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1UO-eO-DM7">
@@ -342,26 +337,22 @@
                                         </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="ifJ-KM-oOD" firstAttribute="top" secondItem="1UO-eO-DM7" secondAttribute="bottom" constant="4" id="2C5-m1-ly9"/>
                                         <constraint firstItem="ieb-ZS-iAA" firstAttribute="top" secondItem="SfB-go-b6P" secondAttribute="top" constant="5" id="3Qr-3e-8RL"/>
                                         <constraint firstItem="1UO-eO-DM7" firstAttribute="leading" secondItem="pzJ-JS-kEQ" secondAttribute="trailing" constant="8" id="71w-sO-47X"/>
                                         <constraint firstAttribute="trailing" secondItem="NRN-n0-Fse" secondAttribute="trailing" id="AVx-Mp-wGs"/>
                                         <constraint firstItem="1UO-eO-DM7" firstAttribute="top" secondItem="ieb-ZS-iAA" secondAttribute="bottom" constant="4" id="HQe-nA-EkY"/>
-                                        <constraint firstItem="ifJ-KM-oOD" firstAttribute="leading" secondItem="pzJ-JS-kEQ" secondAttribute="trailing" constant="8" id="Itm-ab-8JU"/>
                                         <constraint firstItem="NRN-n0-Fse" firstAttribute="leading" secondItem="1UO-eO-DM7" secondAttribute="trailing" constant="8" id="e8D-Si-8Zp"/>
                                         <constraint firstItem="pzJ-JS-kEQ" firstAttribute="leading" secondItem="SfB-go-b6P" secondAttribute="leading" constant="7" id="gbt-MQ-d48"/>
-                                        <constraint firstAttribute="bottom" secondItem="ifJ-KM-oOD" secondAttribute="bottom" constant="26.5" id="hCd-GI-ZMZ"/>
                                         <constraint firstItem="pzJ-JS-kEQ" firstAttribute="top" secondItem="SfB-go-b6P" secondAttribute="top" constant="5" id="itx-dk-gRd"/>
-                                        <constraint firstItem="NRN-n0-Fse" firstAttribute="leading" secondItem="ifJ-KM-oOD" secondAttribute="trailing" constant="8" id="kD7-mV-VNQ"/>
                                         <constraint firstItem="ieb-ZS-iAA" firstAttribute="leading" secondItem="pzJ-JS-kEQ" secondAttribute="trailing" constant="8" id="o2S-1v-Nfb"/>
                                         <constraint firstAttribute="bottom" secondItem="pzJ-JS-kEQ" secondAttribute="bottom" constant="6.5" id="sQb-jQ-kXl"/>
                                         <constraint firstItem="NRN-n0-Fse" firstAttribute="centerY" secondItem="SfB-go-b6P" secondAttribute="centerY" id="zzB-sw-7t2"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <accessibility key="accessibilityConfiguration" identifier="cellResultGroup"/>
                                 <connections>
                                     <outlet property="imgIllustration" destination="pzJ-JS-kEQ" id="Pgp-YG-Gm2"/>
                                     <outlet property="lbNom" destination="ieb-ZS-iAA" id="3uJ-pi-p3f"/>
-                                    <outlet property="lbStyle" destination="ifJ-KM-oOD" id="6Ew-46-YTw"/>
                                     <outlet property="lbVille" destination="1UO-eO-DM7" id="lde-mt-rMH"/>
                                 </connections>
                             </tableViewCell>
@@ -402,7 +393,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iiK-w7-UKR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="710" y="-438"/>
+            <point key="canvasLocation" x="710" y="-362"/>
         </scene>
         <!--Accueil-->
         <scene sceneID="mbO-WU-jog">
@@ -445,7 +436,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="qpv-yd-KW4">
             <objects>
-                <tabBarController id="0dq-2H-j74" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="HomeTabBarController" id="0dq-2H-j74" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="3aJ-kM-1HM" customClass="MyTabBar" customModule="HomeBand" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

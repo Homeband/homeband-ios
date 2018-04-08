@@ -16,7 +16,8 @@
 		99335EF9201CC8A70053E501 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99335EF8201CC8A70053E501 /* SettingsController.swift */; };
 		99335EFC201DF9450053E501 /* GroupSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99335EFB201DF9450053E501 /* GroupSearchController.swift */; };
 		99335EFE201DF9500053E501 /* EventSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99335EFD201DF9500053E501 /* EventSearchController.swift */; };
-		99335F00201E18730053E501 /* HomebandColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99335EFF201E18730053E501 /* HomebandColor.swift */; };
+		99335F00201E18730053E501 /* MyExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99335EFF201E18730053E501 /* MyExtensions.swift */; };
+		9935C243205C3000003C9CD1 /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9935C242205C3000003C9CD1 /* Version.swift */; };
 		9977F5E51FF82B7C0034EB9C /* Utilisateur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9977F5E41FF82B7C0034EB9C /* Utilisateur.swift */; };
 		9977F5E71FF82C1F0034EB9C /* Adresse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9977F5E61FF82C1F0034EB9C /* Adresse.swift */; };
 		9977F5E91FF82C4A0034EB9C /* Avis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9977F5E81FF82C4A0034EB9C /* Avis.swift */; };
@@ -70,7 +71,8 @@
 		99335EF8201CC8A70053E501 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		99335EFB201DF9450053E501 /* GroupSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupSearchController.swift; sourceTree = "<group>"; };
 		99335EFD201DF9500053E501 /* EventSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventSearchController.swift; sourceTree = "<group>"; };
-		99335EFF201E18730053E501 /* HomebandColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomebandColor.swift; sourceTree = "<group>"; };
+		99335EFF201E18730053E501 /* MyExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyExtensions.swift; sourceTree = "<group>"; };
+		9935C242205C3000003C9CD1 /* Version.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Version.swift; sourceTree = "<group>"; };
 		9977F5E41FF82B7C0034EB9C /* Utilisateur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilisateur.swift; sourceTree = "<group>"; };
 		9977F5E61FF82C1F0034EB9C /* Adresse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Adresse.swift; sourceTree = "<group>"; };
 		9977F5E81FF82C4A0034EB9C /* Avis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Avis.swift; sourceTree = "<group>"; };
@@ -125,7 +127,7 @@
 			children = (
 				990DC2BF1FFC31C800D43945 /* Transforms.swift */,
 				99879AFB2009225000CF9565 /* Designables.swift */,
-				99335EFF201E18730053E501 /* HomebandColor.swift */,
+				99335EFF201E18730053E501 /* MyExtensions.swift */,
 				99E7DE302041A60200AC45DD /* LoaderController.swift */,
 				99E7DE322041FE2500AC45DD /* Tools.swift */,
 				99909DCF204C0EA000EAE532 /* Connectivity.swift */,
@@ -148,6 +150,7 @@
 				9977F5F21FF82CA30034EB9C /* Membre.swift */,
 				9977F5F41FF8327F0034EB9C /* DetailEvenement.swift */,
 				9977F5F61FF8334E0034EB9C /* UtilisateurGroupe.swift */,
+				9935C242205C3000003C9CD1 /* Version.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -378,6 +381,7 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
@@ -388,6 +392,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
@@ -416,11 +421,12 @@
 				99D8CC811FBD7C1700ACE437 /* LoginController.swift in Sources */,
 				99879AFC2009225000CF9565 /* Designables.swift in Sources */,
 				9977F5EF1FF82C890034EB9C /* Evenement.swift in Sources */,
-				99335F00201E18730053E501 /* HomebandColor.swift in Sources */,
+				99335F00201E18730053E501 /* MyExtensions.swift in Sources */,
 				9977F5E51FF82B7C0034EB9C /* Utilisateur.swift in Sources */,
 				99E7DE332041FE2500AC45DD /* Tools.swift in Sources */,
 				99335EF7201CC89A0053E501 /* FavouriteController.swift in Sources */,
 				991F0C3E1FCF4EBB0010ABC5 /* Groupe.swift in Sources */,
+				9935C243205C3000003C9CD1 /* Version.swift in Sources */,
 				991F0C401FCF50210010ABC5 /* Ville.swift in Sources */,
 				99E7DE312041A60200AC45DD /* LoaderController.swift in Sources */,
 				9977F5F11FF82C930034EB9C /* Style.swift in Sources */,
