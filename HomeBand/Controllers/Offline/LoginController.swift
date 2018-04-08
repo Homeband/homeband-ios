@@ -26,27 +26,15 @@ class LoginController: UIViewController, UITextFieldDelegate {
     }
     
     override func viewDidLoad() {
-        
-        
-        
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    
-        
         
         self.tfLogin.delegate = self
         self.tfPassword.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
-//        let connectedUser: Utilisateur? = Tools.getConnectedUser()
-//        if(connectedUser != nil){
-//            debugPrint(connectedUser!)
-//            self.performSegue(withIdentifier: self.loginAction, sender: self)
-//        } else {
-            tfLogin.text = "Nicolas"
-            tfPassword.text = "Test123*"
-//        }
+        tfLogin.text = "Nicolas"
+        tfPassword.text = "Test123*"
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -81,7 +69,7 @@ class LoginController: UIViewController, UITextFieldDelegate {
         let login: String! = tfLogin.text
         let password: String! = tfPassword.text
         let type: Int! = 1; // Connexion de type sutilisateur
-        let url : String! = "http://localhost/homeband-api/api/sessions"
+        let url : String! = Tools.BASE_API_URL + "sessions"
         let params: Parameters = [
             "login": login,
             "mot_de_passe": password,
@@ -90,7 +78,7 @@ class LoginController: UIViewController, UITextFieldDelegate {
         
         LoaderController.sharedInstance.showLoader(text: "Connexion...")
         
-        Alamofire.request(url, method: .post, parameters: params)
+        Alamofire.request(url, method: .post, parameters: params, headers: Tools.getHeaders())
             .responseJSON { response in
                 if(response.result.isSuccess){
                     let resultat = response.result.value as! [String:Any]
@@ -127,11 +115,9 @@ class LoginController: UIViewController, UITextFieldDelegate {
                     LoaderController.sharedInstance.removeLoader()
                     let alert = UIAlertController(title: "Echec de la connexion", message: "Erreur lors de l'appel à l'API !", preferredStyle: .alert)
                     let action = UIAlertAction(title: "OK", style: .default, handler: nil)
-                    
+
                     alert.addAction(action)
-                    
                     self.present(alert, animated: false, completion: nil)
-                    
                 }
         }
     }
@@ -139,6 +125,5 @@ class LoginController: UIViewController, UITextFieldDelegate {
     func inscription(sender: Any?){
         
     }
-    
 }
 
