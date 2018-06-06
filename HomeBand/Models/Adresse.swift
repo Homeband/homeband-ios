@@ -35,5 +35,9 @@ class Adresse : Object,Mappable {
         id_villes <- (map["id_villes"], IntTransform())
         est_actif <- (map["est_actif"], BooleanTransform())
     }
+    
+    override static func primaryKey() -> String? {
+        return "id_adresses"
+    }
 }
 

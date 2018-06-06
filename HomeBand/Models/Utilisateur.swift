@@ -22,11 +22,13 @@ class Utilisateur : Object,Mappable {
     @objc dynamic var api_ck: String = ""
     @objc dynamic var est_connecte: Bool = false
     @objc dynamic var id_adresses: Int = 0
+    //let groups = LinkingObjects(fromType: Groupe.self, property: "groups")
+    let groups = List<Groupe>()
+    let events = List<Evenement>()
     
     required convenience init?(map: Map) {
         self.init()
     }
-
     
     func mapping(map: Map) {
         id_utilisateurs <- (map["id_utilisateurs"], IntTransform())

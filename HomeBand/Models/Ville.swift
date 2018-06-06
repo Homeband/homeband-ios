@@ -31,4 +31,9 @@ class Ville : Object,Mappable {
         lon <- (map["lon"], DoubleTransform())
         est_actif <- (map["est_actif"], BooleanTransform())
     }
+    
+    override static func primaryKey() -> String? {
+        return "id_villes"
+    }
+
 }

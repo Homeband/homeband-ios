@@ -31,5 +31,9 @@ class Titre : Object,Mappable {
         id_groupes <- (map["id_groupes"], IntTransform())
         id_albums <- (map["id_albums"], IntTransform())
     }
+    
+    override static func primaryKey() -> String? {
+        return "id_titres"
+    }
 }
 

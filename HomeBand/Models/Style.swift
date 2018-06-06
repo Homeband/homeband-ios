@@ -25,4 +25,8 @@ class Style : Object,Mappable {
         nom <- map["nom"]
         est_actif <- (map["est_actif"], BooleanTransform())
     }
+    
+    override static func primaryKey() -> String? {
+        return "id_styles"
+    }
 }

@@ -35,4 +35,8 @@ class Membre : Object,Mappable {
         est_actif <- (map["est_actif"], BooleanTransform())
         id_groupes <- (map["id_groupes"], IntTransform())
     }
+    
+    override static func primaryKey() -> String? {
+        return "id_membres"
+    }
 }

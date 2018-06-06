@@ -37,5 +37,9 @@ class Avis : Object,Mappable {
         id_utilisateurs <- (map["id_utilisateurs"], IntTransform())
         id_groupes <- (map["id_groupes"], IntTransform())
     }
+    
+    override static func primaryKey() -> String? {
+        return "id_avis"
+    }
 }
 

@@ -30,7 +30,10 @@ class Album : Object,Mappable {
         date_sortie <- (map["date_sortie"], DateTransform())
         est_actif <- (map["est_actif"], BooleanTransform())
         id_groupes <- (map["id_groupes"], IntTransform())
-       
+    }
+    
+    override static func primaryKey() -> String? {
+        return "id_albums"
     }
 }
 

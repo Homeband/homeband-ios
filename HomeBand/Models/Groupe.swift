@@ -33,6 +33,8 @@ class Groupe : Object,Mappable {
     @objc dynamic var id_style: Int = 0
     @objc dynamic var id_villes: Int = 0
     @objc dynamic var api_ck: String = ""
+    let utilisateurs = LinkingObjects(fromType: Utilisateur.self, property: "groups")
+    let evenements = List<Evenement>()
     
     required convenience init?(map: Map){
         self.init()
@@ -55,8 +57,12 @@ class Groupe : Object,Mappable {
         lien_instagram <- map["lien_instagram"]
         lien_facebook <- map["lien_facebook"]
         est_actif <- (map["est_actif"], BooleanTransform())
-        id_style <- (map["id_style"], IntTransform())
+        id_style <- (map["id_styles"], IntTransform())
         id_villes <- (map["id_villes"], IntTransform())
         api_ck <- map["api_ck"]
+    }
+    
+    override static func primaryKey() -> String? {
+        return "id_groupes"
     }
 }
