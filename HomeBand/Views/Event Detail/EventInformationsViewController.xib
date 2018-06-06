@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EventInformationsViewController" customModule="HomeBand" customModuleProvider="target">
+            <connections>
+                <outlet property="lbAdresse" destination="9EM-qI-3r7" id="6SX-Kt-aB6"/>
+                <outlet property="lbDateHeure" destination="QcZ-yP-1fW" id="4Qf-ju-bLh"/>
+                <outlet property="lbNom" destination="cvZ-yy-n1V" id="B45-KP-Fb9"/>
+                <outlet property="lbNomGroupe" destination="FGP-Io-gAU" id="1yG-Zu-26k"/>
+                <outlet property="lbPrix" destination="WOB-eM-eGL" id="boj-Y4-5po"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="355" height="294"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nom de l'évènement" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cvZ-yy-n1V">
+                    <rect key="frame" x="0.0" y="0.0" width="355" height="23"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Groupe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FGP-Io-gAU">
+                    <rect key="frame" x="0.0" y="28" width="355" height="19.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adresse" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9EM-qI-3r7">
+                    <rect key="frame" x="0.0" y="62.5" width="355" height="19.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prix" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WOB-eM-eGL">
+                    <rect key="frame" x="0.0" y="133" width="355" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date et Heure" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QcZ-yP-1fW">
+                    <rect key="frame" x="0.0" y="97" width="355" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="9EM-qI-3r7" secondAttribute="trailing" id="1CZ-k8-1FS"/>
+                <constraint firstItem="9EM-qI-3r7" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="4ah-BR-mqW"/>
+                <constraint firstItem="cvZ-yy-n1V" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="7j8-vZ-m6f"/>
+                <constraint firstItem="FGP-Io-gAU" firstAttribute="top" secondItem="cvZ-yy-n1V" secondAttribute="bottom" constant="5" id="COs-Gc-LgS"/>
+                <constraint firstItem="9EM-qI-3r7" firstAttribute="top" secondItem="FGP-Io-gAU" secondAttribute="bottom" constant="15" id="E5K-zc-uMf"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="cvZ-yy-n1V" secondAttribute="trailing" id="EXF-4c-Xnq"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="QcZ-yP-1fW" secondAttribute="trailing" id="HAL-4F-MiT"/>
+                <constraint firstItem="QcZ-yP-1fW" firstAttribute="top" secondItem="9EM-qI-3r7" secondAttribute="bottom" constant="15" id="Kto-mn-824"/>
+                <constraint firstItem="WOB-eM-eGL" firstAttribute="top" secondItem="QcZ-yP-1fW" secondAttribute="bottom" constant="15" id="L6n-Lj-550"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="FGP-Io-gAU" secondAttribute="trailing" id="X92-tz-DFw"/>
+                <constraint firstItem="WOB-eM-eGL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="bpO-R2-AMC"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="WOB-eM-eGL" secondAttribute="trailing" id="eZR-u8-vW5"/>
+                <constraint firstItem="FGP-Io-gAU" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="g7W-to-NYE"/>
+                <constraint firstItem="cvZ-yy-n1V" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="puu-Qb-VVf"/>
+                <constraint firstItem="QcZ-yP-1fW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="qLM-3Z-54Z"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="33.5" y="72"/>
+        </view>
+    </objects>
+</document>
