@@ -68,12 +68,13 @@ class LoginController: UIViewController, UITextFieldDelegate {
         // Variables
         let login: String! = tfLogin.text
         let password: String! = tfPassword.text
-        let type: Int! = 1; // Connexion de type sutilisateur
+        let type: Int! = 1; // Connexion de type utilisateur
         let url : String! = Tools.BASE_API_URL + "sessions"
+        
         let params: Parameters = [
-            "login": login,
-            "mot_de_passe": password,
-            "type": type
+            "login": login as String,
+            "mot_de_passe": password as String,
+            "type": type as Int
         ]
         
         LoaderController.sharedInstance.showLoader(text: "Connexion...")
@@ -82,6 +83,7 @@ class LoginController: UIViewController, UITextFieldDelegate {
             .responseJSON { response in
                 if(response.result.isSuccess){
                     let resultat = response.result.value as! [String:Any]
+                    print(resultat)
                     let message = resultat["message"] as! String
                     let status = resultat["status"] as! Bool
                     if(status){
@@ -93,10 +95,14 @@ class LoginController: UIViewController, UITextFieldDelegate {
                         
                         try? realm.write{
                             user.est_connecte = true
-                            realm.add(user, update: true)
-                            
-                            let u: Utilisateur = realm.object(ofType: Utilisateur.self, forPrimaryKey: user.id_utilisateurs)!
-                            debugPrint(u)
+                            let userDB:Utilisateur? = realm.object(ofType: Utilisateur.self, forPrimaryKey: user.id_utilisateurs)
+                            if(userDB != nil) {
+                                userDB!.api_ck = user.api_ck
+                                userDB!.email = user.email
+                                userDB!.est_connecte = true
+                            } else {
+                                realm.add(user, update: true)
+                            }
                         }
                         
                         LoaderController.sharedInstance.removeLoader()
