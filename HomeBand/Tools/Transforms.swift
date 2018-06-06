@@ -16,7 +16,13 @@ class BooleanTransform : TransformType {
     typealias JSON = String
     
     func transformFromJSON(_ value: Any?) -> Bool? {
-        return ((value as! String) == "1") ? true : false
+        if(value == nil){
+            return false
+        } else if(value is Bool){
+            return value as? Bool
+        } else {
+            return ((value as! String) == "1") ? true : false
+        }
     }
     
     func transformToJSON(_ value: Bool?) -> String? {
@@ -29,7 +35,13 @@ class IntTransform : TransformType {
     typealias JSON = Int
     
     func transformFromJSON(_ value: Any?) -> Int? {
-        return Int((value as! String))
+        if(value == nil){
+            return 0
+        } else if(value is Int){
+            return value as? Int
+        } else {
+            return Int((value as! String))
+        }
     }
     
     func transformToJSON(_ value: Int?) -> Int? {
@@ -42,10 +54,37 @@ class DoubleTransform : TransformType {
     typealias JSON = Double
     
     func transformFromJSON(_ value: Any?) -> Double? {
-        return Double((value as! String))
+        if(value == nil){
+            return 0
+        } else if(value is Double){
+            return value as? Double
+        } else {
+            return Double((value as! String))
+        }
     }
     
     func transformToJSON(_ value: Double?) -> Double? {
+        return value
+    }
+}
+
+class DateTimeTransform : TransformType {
+    typealias Object = Date
+    typealias JSON = Date
+    
+    func transformFromJSON(_ value: Any?) -> Date? {
+        if(value == nil){
+            return nil
+        } else if(value is Date){
+            return value as? Date
+        } else {
+            let formatter = DateFormatter()
+            formatter.dateFormat = "yyyy-MM-dd HH:mm:SS"
+            return formatter.date(from: (value as! String))
+        }
+    }
+    
+    func transformToJSON(_ value: Date?) -> Date? {
         return value
     }
 }

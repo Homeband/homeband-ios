@@ -14,6 +14,7 @@ class LoaderController: NSObject {
     static let sharedInstance = LoaderController()
     private let activityIndicator = UIActivityIndicatorView()
     
+    private let backgroundView: UIView = UIView()
     private let loadingView: UIView = UIView()
     private let label: UILabel = UILabel()
     
@@ -21,6 +22,9 @@ class LoaderController: NSObject {
     //MARK: - Private Methods -
     private func setupLoader(text: String) {
         removeLoader()
+        
+        backgroundView.backgroundColor = UIColor(hex:0x333333, alpha: 0.5)
+        backgroundView.frame = UIScreen.main.bounds
         
         loadingView.frame = CGRect(x:0, y:-15, width:150, height:80)
         loadingView.backgroundColor = UIColor(hex:0xffffff, alpha: 0.7)
@@ -38,21 +42,23 @@ class LoaderController: NSObject {
     
     //MARK: - Public Methods -
     func showLoader(text: String = "Chargement...") {
-        setupLoader(text: text)
+        
+        self.setupLoader(text: text)
         
         let appDel = UIApplication.shared.delegate as! AppDelegate
         let holdingView = appDel.window!.rootViewController!.view!
         
-        
-        
         DispatchQueue.main.async {
+            
             self.activityIndicator.center = self.loadingView.center
             self.loadingView.center = holdingView.center
             self.loadingView.addSubview(self.activityIndicator)
             self.loadingView.addSubview(self.label)
+            self.backgroundView.addSubview(self.loadingView)
             
             self.activityIndicator.startAnimating()
-            holdingView.addSubview(self.loadingView)
+            
+            holdingView.addSubview(self.backgroundView)
             UIApplication.shared.beginIgnoringInteractionEvents()
         }
     }
@@ -60,7 +66,8 @@ class LoaderController: NSObject {
     func removeLoader(){
         DispatchQueue.main.async {
             self.activityIndicator.stopAnimating()
-            self.loadingView.removeFromSuperview()
+            self.backgroundView.removeFromSuperview()
+            
             UIApplication.shared.endIgnoringInteractionEvents()
         }
     }

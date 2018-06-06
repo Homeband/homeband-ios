@@ -82,3 +82,16 @@ class MyTextField: UITextField {
         }
     }
 }
+
+@IBDesignable
+class CustomImageButton: RadiusButton {
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        if imageView != nil {
+            imageEdgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: (bounds.width - 35))
+            titleEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: (imageView?.frame.width)!)
+        }
+    }
+}
+
