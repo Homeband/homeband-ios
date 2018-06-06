@@ -21,11 +21,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+        if(!application.isIgnoringInteractionEvents){
+            //application.beginIgnoringInteractionEvents()
+        }
+        
         initIQKeyboard()
         
         // Configuration de Realm
         let config = Realm.Configuration(
-            schemaVersion: 2,
+            schemaVersion: 8,
             migrationBlock: { migration, oldSchemaVersion in
                 // We haven’t migrated anything yet, so oldSchemaVersion == 0
                 if (oldSchemaVersion < 1) {
@@ -39,10 +43,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let connectedUser: Utilisateur? = Tools.getConnectedUser()
         if(connectedUser != nil){
+            
             let storyboard = UIStoryboard.init(name: "Home", bundle: nil)
             let nav = storyboard.instantiateInitialViewController()
             
             self.window?.rootViewController = nav
+            
+            if(Connectivity.isConnectedToInternet()){
+                /*Tools.checkReferencesUpdates(completion: {(isUpdated) in
+                    if(!isUpdated){
+                        let title = "Mise à jour disponible"
+                        let message = "Pour effectuer la mise à jour plus tard, rendez-vous dans les paramètres de l'application"
+                        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+                        let actionOK = UIAlertAction(title: "OK", style: .default, handler: nil)
+                        
+                        alert.addAction(actionOK)
+                        nav?.present(alert, animated: true)
+                    }
+                })*/
+            }
         }
         
         return true

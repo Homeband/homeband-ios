@@ -1,0 +1,18 @@
+
+/* Class = "UIButton"; normalTitle = "Mot de passe oublié ?"; ObjectID = "9l4-Qe-47V"; */
+"9l4-Qe-47V.normalTitle" = "Mot de passe oublié ?";
+
+/* Class = "UIViewController"; title = "Connexion"; ObjectID = "BYZ-38-t0r"; */
+"BYZ-38-t0r.title" = "Connexion";
+
+/* Class = "UIButton"; normalTitle = "Créer un compte"; ObjectID = "Bpe-XE-1zf"; */
+"Bpe-XE-1zf.normalTitle" = "Créer un compte";
+
+/* Class = "UITextField"; placeholder = "Mot de passe"; ObjectID = "deA-4u-giz"; */
+"deA-4u-giz.placeholder" = "Mot de passe";
+
+/* Class = "UITextField"; placeholder = "Identifiant"; ObjectID = "k25-7v-B1Z"; */
+"k25-7v-B1Z.placeholder" = "Identifiant";
+
+/* Class = "UIButton"; normalTitle = "Connexion"; ObjectID = "wA9-uc-TCA"; */
+"wA9-uc-TCA.normalTitle" = "Connexion";
