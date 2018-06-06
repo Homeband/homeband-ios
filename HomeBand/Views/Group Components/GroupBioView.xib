@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GroupBioView" customModule="HomeBand" customModuleProvider="target">
+            <connections>
+                <outlet property="btnApple" destination="LSy-JK-FyI" id="Sj8-No-c3v"/>
+                <outlet property="btnBandcamp" destination="6G8-pz-G1r" id="HFa-zR-ljf"/>
+                <outlet property="btnFacebook" destination="jcB-xG-7Jh" id="7fR-RZ-SXT"/>
+                <outlet property="btnInstagram" destination="dL0-Xz-4LS" id="scu-RW-k4J"/>
+                <outlet property="btnSoundcloud" destination="wyH-yV-Wg2" id="WqK-jc-mcV"/>
+                <outlet property="btnSpotify" destination="y48-zq-J6O" id="l0Q-Bo-gWh"/>
+                <outlet property="btnTwitter" destination="zux-BI-t4F" id="ZEd-G2-Lqp"/>
+                <outlet property="btnYoutube" destination="ju8-uG-2nQ" id="iit-xm-2LS"/>
+                <outlet property="tvBiographie" destination="uJ5-x7-zVO" id="GhW-3o-Kyc"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view autoresizesSubviews="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" insetsLayoutMarginsFromSafeArea="NO" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="343" height="339"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qRH-av-5uU">
+                    <rect key="frame" x="13.5" y="0.0" width="316" height="36"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jcB-xG-7Jh" customClass="RadiusButton" customModule="HomeBand" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="36" height="36"/>
+                            <color key="backgroundColor" name="quaternaryLabelColor" catalog="System" colorSpace="catalog"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="36" id="JGU-7K-sEP"/>
+                                <constraint firstAttribute="width" secondItem="jcB-xG-7Jh" secondAttribute="height" multiplier="1:1" id="spc-o4-hcy"/>
+                                <constraint firstAttribute="height" constant="36" id="xeE-Al-DJx"/>
+                            </constraints>
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <inset key="contentEdgeInsets" minX="7" minY="7" maxX="7" maxY="7"/>
+                            <state key="normal" image="Facebook"/>
+                            <state key="disabled" image="Facebook">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <state key="selected" image="Facebook"/>
+                            <state key="highlighted" image="Facebook"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="18"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="onClickSocialMedia:" destination="-1" eventType="touchUpInside" id="1Wl-w4-4EM"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zux-BI-t4F" customClass="RadiusButton" customModule="HomeBand" customModuleProvider="target">
+                            <rect key="frame" x="40" y="0.0" width="36" height="36"/>
+                            <color key="backgroundColor" name="quaternaryLabelColor" catalog="System" colorSpace="catalog"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="zux-BI-t4F" secondAttribute="height" multiplier="1:1" id="HEu-xZ-F1r"/>
+                            </constraints>
+                            <color key="tintColor" red="0.9688948624" green="0.9688948624" blue="0.9688948624" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <inset key="contentEdgeInsets" minX="7" minY="7" maxX="7" maxY="7"/>
+                            <state key="normal" image="Twitter"/>
+                            <state key="disabled" image="Twitter"/>
+                            <state key="selected" image="Twitter"/>
+                            <state key="highlighted" image="Twitter"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="18"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="onClickSocialMedia:" destination="-1" eventType="touchUpInside" id="yyo-0R-QJy"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dL0-Xz-4LS" customClass="RadiusButton" customModule="HomeBand" customModuleProvider="target">
+                            <rect key="frame" x="80" y="0.0" width="36" height="36"/>
+                            <color key="backgroundColor" name="quaternaryLabelColor" catalog="System" colorSpace="catalog"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="dL0-Xz-4LS" secondAttribute="height" multiplier="1:1" id="xhU-JC-zqw"/>
+                            </constraints>
+                            <color key="tintColor" red="0.9688948624" green="0.9688948624" blue="0.9688948624" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <inset key="contentEdgeInsets" minX="7" minY="7" maxX="7" maxY="7"/>
+                            <state key="normal" image="Instagram"/>
+                            <state key="disabled" image="Instagram"/>
+                            <state key="highlighted" image="Instagram"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="18"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="onClickSocialMedia:" destination="-1" eventType="touchUpInside" id="wAj-K1-KRM"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ju8-uG-2nQ" customClass="RadiusButton" customModule="HomeBand" customModuleProvider="target">
+                            <rect key="frame" x="120" y="0.0" width="36" height="36"/>
+                            <color key="backgroundColor" name="quaternaryLabelColor" catalog="System" colorSpace="catalog"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="ju8-uG-2nQ" secondAttribute="height" multiplier="1:1" id="46l-px-GXz"/>
+                            </constraints>
+                            <color key="tintColor" red="0.9688948624" green="0.9688948624" blue="0.9688948624" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <inset key="contentEdgeInsets" minX="7" minY="7" maxX="7" maxY="7"/>
+                            <state key="normal" image="Youtube"/>
+                            <state key="disabled" image="Youtube"/>
+                            <state key="selected" image="Youtube"/>
+                            <state key="highlighted" image="Youtube"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="18"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="onClickSocialMedia:" destination="-1" eventType="touchUpInside" id="GdS-Ir-XW5"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y48-zq-J6O" customClass="RadiusButton" customModule="HomeBand" customModuleProvider="target">
+                            <rect key="frame" x="160" y="0.0" width="36" height="36"/>
+                            <color key="backgroundColor" name="quaternaryLabelColor" catalog="System" colorSpace="catalog"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="y48-zq-J6O" secondAttribute="height" multiplier="1:1" id="aQ2-Qf-KXl"/>
+                            </constraints>
+                            <color key="tintColor" red="0.9688948624" green="0.9688948624" blue="0.9688948624" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                            <state key="normal" image="Spotify"/>
+                            <state key="disabled" image="Spotify"/>
+                            <state key="selected" image="Spotify"/>
+                            <state key="highlighted" image="Spotify"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="18"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="onClickSocialMedia:" destination="-1" eventType="touchUpInside" id="oVc-9g-Uh5"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6G8-pz-G1r" customClass="RadiusButton" customModule="HomeBand" customModuleProvider="target">
+                            <rect key="frame" x="200" y="0.0" width="36" height="36"/>
+                            <color key="backgroundColor" name="quaternaryLabelColor" catalog="System" colorSpace="catalog"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="6G8-pz-G1r" secondAttribute="height" multiplier="1:1" id="krj-To-Dfq"/>
+                            </constraints>
+                            <color key="tintColor" red="0.9688948624" green="0.9688948624" blue="0.9688948624" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                            <state key="normal" image="Bandcamp"/>
+                            <state key="disabled" image="Bandcamp"/>
+                            <state key="selected" image="Bandcamp"/>
+                            <state key="highlighted" image="Bandcamp"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="18"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="onClickSocialMedia:" destination="-1" eventType="touchUpInside" id="np2-Rb-bGC"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wyH-yV-Wg2" customClass="RadiusButton" customModule="HomeBand" customModuleProvider="target">
+                            <rect key="frame" x="240" y="0.0" width="36" height="36"/>
+                            <color key="backgroundColor" name="quaternaryLabelColor" catalog="System" colorSpace="catalog"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="wyH-yV-Wg2" secondAttribute="height" multiplier="1:1" id="VmI-nh-wDE"/>
+                            </constraints>
+                            <color key="tintColor" red="0.9688948624" green="0.9688948624" blue="0.9688948624" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                            <state key="normal" image="Soundcloud"/>
+                            <state key="disabled" image="Soundcloud"/>
+                            <state key="selected" image="Soundcloud"/>
+                            <state key="highlighted" image="Soundcloud"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="18"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="onClickSocialMedia:" destination="-1" eventType="touchUpInside" id="hyl-3s-Vmx"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LSy-JK-FyI" customClass="RadiusButton" customModule="HomeBand" customModuleProvider="target">
+                            <rect key="frame" x="280" y="0.0" width="36" height="36"/>
+                            <color key="backgroundColor" name="quaternaryLabelColor" catalog="System" colorSpace="catalog"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="LSy-JK-FyI" secondAttribute="height" multiplier="1:1" id="KHE-DH-BqG"/>
+                            </constraints>
+                            <color key="tintColor" red="0.9688948624" green="0.9688948624" blue="0.9688948624" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <inset key="contentEdgeInsets" minX="7" minY="7" maxX="7" maxY="7"/>
+                            <state key="normal" image="Apple"/>
+                            <state key="disabled" image="Apple"/>
+                            <state key="highlighted" image="Apple"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="18"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="onClickSocialMedia:" destination="-1" eventType="touchUpInside" id="2GD-M3-ZIR"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="dL0-Xz-4LS" firstAttribute="height" secondItem="jcB-xG-7Jh" secondAttribute="height" id="07T-xx-lai"/>
+                        <constraint firstItem="jcB-xG-7Jh" firstAttribute="leading" secondItem="qRH-av-5uU" secondAttribute="leading" id="2Ua-LH-5hV"/>
+                        <constraint firstItem="LSy-JK-FyI" firstAttribute="top" secondItem="qRH-av-5uU" secondAttribute="top" id="3dt-V3-ajt"/>
+                        <constraint firstItem="LSy-JK-FyI" firstAttribute="height" secondItem="jcB-xG-7Jh" secondAttribute="height" id="5LS-hb-Wjo"/>
+                        <constraint firstAttribute="bottom" secondItem="dL0-Xz-4LS" secondAttribute="bottom" id="6Lv-aC-Svr"/>
+                        <constraint firstAttribute="bottom" secondItem="wyH-yV-Wg2" secondAttribute="bottom" id="71X-po-egr"/>
+                        <constraint firstItem="6G8-pz-G1r" firstAttribute="top" secondItem="qRH-av-5uU" secondAttribute="top" id="7Yr-aB-MGT"/>
+                        <constraint firstAttribute="bottom" secondItem="jcB-xG-7Jh" secondAttribute="bottom" id="7l9-Zi-kgd"/>
+                        <constraint firstItem="6G8-pz-G1r" firstAttribute="width" secondItem="jcB-xG-7Jh" secondAttribute="width" id="9OL-vU-Xvd"/>
+                        <constraint firstItem="LSy-JK-FyI" firstAttribute="top" secondItem="qRH-av-5uU" secondAttribute="top" id="DoX-jc-f7W"/>
+                        <constraint firstAttribute="bottom" secondItem="LSy-JK-FyI" secondAttribute="bottom" id="DwV-qd-ig5"/>
+                        <constraint firstItem="dL0-Xz-4LS" firstAttribute="width" secondItem="jcB-xG-7Jh" secondAttribute="width" id="H3h-ep-yua"/>
+                        <constraint firstAttribute="trailing" secondItem="LSy-JK-FyI" secondAttribute="trailing" id="HHi-Dk-dg4"/>
+                        <constraint firstItem="dL0-Xz-4LS" firstAttribute="top" secondItem="qRH-av-5uU" secondAttribute="top" id="KPz-ON-qZu"/>
+                        <constraint firstItem="LSy-JK-FyI" firstAttribute="leading" secondItem="wyH-yV-Wg2" secondAttribute="trailing" constant="4" id="O67-rS-Jkh"/>
+                        <constraint firstItem="ju8-uG-2nQ" firstAttribute="top" secondItem="qRH-av-5uU" secondAttribute="top" id="OCd-wl-WeR"/>
+                        <constraint firstItem="wyH-yV-Wg2" firstAttribute="top" secondItem="qRH-av-5uU" secondAttribute="top" id="Q80-4R-dtI"/>
+                        <constraint firstItem="zux-BI-t4F" firstAttribute="height" secondItem="jcB-xG-7Jh" secondAttribute="height" id="Qzh-gY-DDA"/>
+                        <constraint firstItem="zux-BI-t4F" firstAttribute="top" secondItem="qRH-av-5uU" secondAttribute="top" id="RM2-wR-5S0"/>
+                        <constraint firstItem="dL0-Xz-4LS" firstAttribute="leading" secondItem="zux-BI-t4F" secondAttribute="trailing" constant="4" id="S4G-5h-6Qh"/>
+                        <constraint firstAttribute="bottom" secondItem="6G8-pz-G1r" secondAttribute="bottom" id="SVy-Gt-4ch"/>
+                        <constraint firstItem="y48-zq-J6O" firstAttribute="height" secondItem="jcB-xG-7Jh" secondAttribute="height" id="Sba-oj-fbh"/>
+                        <constraint firstItem="y48-zq-J6O" firstAttribute="top" secondItem="qRH-av-5uU" secondAttribute="top" id="UQd-u9-xuN"/>
+                        <constraint firstAttribute="bottom" secondItem="ju8-uG-2nQ" secondAttribute="bottom" id="VWH-Gy-GO6"/>
+                        <constraint firstItem="zux-BI-t4F" firstAttribute="top" secondItem="qRH-av-5uU" secondAttribute="top" id="Va4-4Q-YFo"/>
+                        <constraint firstItem="6G8-pz-G1r" firstAttribute="leading" secondItem="y48-zq-J6O" secondAttribute="trailing" constant="4" id="WMe-Kb-ZXB"/>
+                        <constraint firstItem="wyH-yV-Wg2" firstAttribute="leading" secondItem="6G8-pz-G1r" secondAttribute="trailing" constant="4" id="WOW-7l-NKV"/>
+                        <constraint firstItem="y48-zq-J6O" firstAttribute="top" secondItem="qRH-av-5uU" secondAttribute="top" id="WX3-CM-5aA"/>
+                        <constraint firstItem="LSy-JK-FyI" firstAttribute="width" secondItem="jcB-xG-7Jh" secondAttribute="width" id="Zye-wd-uhm"/>
+                        <constraint firstItem="y48-zq-J6O" firstAttribute="leading" secondItem="ju8-uG-2nQ" secondAttribute="trailing" constant="4" id="aig-tR-Wuz"/>
+                        <constraint firstItem="ju8-uG-2nQ" firstAttribute="height" secondItem="jcB-xG-7Jh" secondAttribute="height" id="anY-wT-K6D"/>
+                        <constraint firstItem="6G8-pz-G1r" firstAttribute="height" secondItem="jcB-xG-7Jh" secondAttribute="height" id="axa-yv-8r6"/>
+                        <constraint firstItem="wyH-yV-Wg2" firstAttribute="top" secondItem="qRH-av-5uU" secondAttribute="top" id="cUY-0C-rXk"/>
+                        <constraint firstItem="ju8-uG-2nQ" firstAttribute="top" secondItem="qRH-av-5uU" secondAttribute="top" id="dDm-31-aSh"/>
+                        <constraint firstItem="wyH-yV-Wg2" firstAttribute="width" secondItem="jcB-xG-7Jh" secondAttribute="width" id="fne-p3-4i4"/>
+                        <constraint firstItem="zux-BI-t4F" firstAttribute="leading" secondItem="jcB-xG-7Jh" secondAttribute="trailing" constant="4" id="g8I-Vr-YRK"/>
+                        <constraint firstItem="jcB-xG-7Jh" firstAttribute="top" secondItem="qRH-av-5uU" secondAttribute="top" id="hOd-OI-xTI"/>
+                        <constraint firstItem="y48-zq-J6O" firstAttribute="width" secondItem="jcB-xG-7Jh" secondAttribute="width" id="iRT-Yv-PrT"/>
+                        <constraint firstItem="ju8-uG-2nQ" firstAttribute="width" secondItem="jcB-xG-7Jh" secondAttribute="width" id="iUe-5o-FZG"/>
+                        <constraint firstItem="wyH-yV-Wg2" firstAttribute="height" secondItem="jcB-xG-7Jh" secondAttribute="height" id="l3E-k0-8OX"/>
+                        <constraint firstItem="dL0-Xz-4LS" firstAttribute="top" secondItem="qRH-av-5uU" secondAttribute="top" id="luk-Ac-c4m"/>
+                        <constraint firstItem="ju8-uG-2nQ" firstAttribute="leading" secondItem="dL0-Xz-4LS" secondAttribute="trailing" constant="4" id="mQu-Cf-fNV"/>
+                        <constraint firstItem="jcB-xG-7Jh" firstAttribute="top" secondItem="qRH-av-5uU" secondAttribute="top" id="n12-69-dMJ"/>
+                        <constraint firstItem="6G8-pz-G1r" firstAttribute="top" secondItem="qRH-av-5uU" secondAttribute="top" id="o9O-nR-Y0r"/>
+                        <constraint firstAttribute="bottom" secondItem="zux-BI-t4F" secondAttribute="bottom" id="pXJ-ta-DMK"/>
+                        <constraint firstAttribute="bottom" secondItem="y48-zq-J6O" secondAttribute="bottom" id="sMu-3y-Cbb"/>
+                        <constraint firstItem="zux-BI-t4F" firstAttribute="width" secondItem="jcB-xG-7Jh" secondAttribute="width" id="wl0-fE-J1u"/>
+                    </constraints>
+                </view>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="uJ5-x7-zVO">
+                    <rect key="frame" x="0.0" y="44" width="343" height="295"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="uJ5-x7-zVO" firstAttribute="top" secondItem="qRH-av-5uU" secondAttribute="bottom" constant="8" id="1jx-LQ-cdc"/>
+                <constraint firstItem="qRH-av-5uU" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="LeV-PC-uEu"/>
+                <constraint firstItem="qRH-av-5uU" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Vg2-eD-3ai"/>
+                <constraint firstItem="uJ5-x7-zVO" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="brr-Yq-rkr"/>
+                <constraint firstAttribute="trailing" secondItem="uJ5-x7-zVO" secondAttribute="trailing" id="f6s-iq-kFb"/>
+                <constraint firstAttribute="bottom" secondItem="uJ5-x7-zVO" secondAttribute="bottom" id="nyU-eF-K5g"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="135.5" y="76.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Apple" width="256" height="256"/>
+        <image name="Bandcamp" width="256" height="256"/>
+        <image name="Facebook" width="256" height="256"/>
+        <image name="Instagram" width="256" height="256"/>
+        <image name="Soundcloud" width="256" height="256"/>
+        <image name="Spotify" width="256" height="256"/>
+        <image name="Twitter" width="256" height="256"/>
+        <image name="Youtube" width="256" height="256"/>
+    </resources>
+</document>
