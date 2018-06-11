@@ -2,7 +2,7 @@
 //  Tools.swift
 //  HomeBand
 //
-//  Created by Nicolas Gérard on 24/02/18.
+//  Created on 24/02/18.
 //  Copyright © 2018 HEH. All rights reserved.
 //
 
@@ -18,6 +18,10 @@ import CoreLocation
 
 class Tools {
     static let BASE_API_URL : String! = "http://dev.zen-project.be/homeband-api/api/"
+    static let BASE_IMAGE_GROUP_URL : String! = "http://dev.zen-project.be/homeband/images/group/"
+    static let BASE_IMAGE_EVENT_URL : String! = "http://dev.zen-project.be/homeband/images/event/"
+    static let BASE_IMAGE_ALBUM_URL : String! = "http://dev.zen-project.be/homeband/images/album/"
+    static let NO_IMAGE_URL : String! = "http://dev.zen-project.be/homeband/images/no_image.png"
     
     class func isAppInitialized() -> Bool {
         // Récupération des préférences
@@ -83,13 +87,13 @@ class Tools {
         let realm = try! Realm()
         let users = realm.objects(Utilisateur.self).filter("est_connecte = 1")
         if(users.count > 0){
-            return users.first!
+            return Utilisateur(value: users.first!)
         } else {
             return nil
         }
     }
     
-    class func disconnectUser() -> Bool
+    class func disconnectUser()
     {
         let connectedUser: Utilisateur? = self.getConnectedUser()!
         
@@ -100,8 +104,6 @@ class Tools {
                 realm.add(connectedUser!, update: true)
             }
         }
-        
-        return true
     }
     
     class func updateStyles() {

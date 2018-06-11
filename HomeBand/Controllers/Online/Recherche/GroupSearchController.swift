@@ -2,7 +2,7 @@
 //  GroupSearchController.swift
 //  HomeBand
 //
-//  Created by Nicolas Gérard on 28/01/18.
+//  Created on 28/01/18.
 //  Copyright © 2018 HEH. All rights reserved.
 //
 
@@ -10,10 +10,8 @@ import Foundation
 import UIKit
 import Alamofire
 import Alamofire_Synchronous
-import AlamofireImage
 import AlamofireObjectMapper
 import ObjectMapper
-import RealmSwift
 import ImageLoader
 import Toucan
 
@@ -26,10 +24,13 @@ class GroupSearchController: UITableViewController{
     var searchParams: Parameters = Parameters()
     var groupes: [Groupe]!
     
+    let dateFormatter = DateFormatter()
     let villeDao = VilleDaoImpl()!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        dateFormatter.dateFormat = "dd/MM/yyyy HH:mm"
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -56,12 +57,17 @@ class GroupSearchController: UITableViewController{
         cell.lbNom.text = group.nom
         cell.lbVille.text = ville!.nom
         
-        let urlImage = "http://www.radio2m.ma/wp-content/uploads/2015/11/musique-non-stop2.jpg"
+        var urlImg:String = Tools.NO_IMAGE_URL
         
+        if(group.illustration != ""){
+            urlImg = Tools.BASE_IMAGE_GROUP_URL + group.illustration
+        }
+        
+        // Image
         let imgWidth = cell.imgIllustration.frame.size.width
         let imgHeight = cell.imgIllustration.frame.size.height
         
-        cell.imgIllustration.load.request(with: urlImage, onCompletion: { image, error, operation in
+        cell.imgIllustration.load.request(with: urlImg, onCompletion: { image, error, operation in
             let imageOK = Toucan(image: image!).resize(CGSize(width: imgWidth, height: imgHeight), fitMode: Toucan.Resize.FitMode.crop).image
             
                 let transition = CATransition()

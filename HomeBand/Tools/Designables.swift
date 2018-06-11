@@ -2,7 +2,7 @@
 //  Designables.swift
 //  HomeBand
 //
-//  Created by Nicolas Gérard on 12/01/18.
+//  Created on 12/01/18.
 //  Copyright © 2018 HEH. All rights reserved.
 //
 
@@ -91,6 +91,28 @@ class CustomImageButton: RadiusButton {
         if imageView != nil {
             imageEdgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: (bounds.width - 35))
             titleEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: (imageView?.frame.width)!)
+        }
+    }
+}
+
+@IBDesignable
+class CustomTextView:UITextView{
+    @IBInspectable var borderColor: UIColor = UIColor.white {
+        didSet {
+            layer.borderColor = borderColor.cgColor
+        }
+    }
+    
+    @IBInspectable var borderWidth: CGFloat = 1.0 {
+        didSet {
+            layer.borderWidth = borderWidth
+        }
+    }
+    
+    @IBInspectable var cornurRadius: CGFloat = 1.0 {
+        didSet {
+            layer.cornerRadius = cornurRadius
+            clipsToBounds = true
         }
     }
 }

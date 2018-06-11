@@ -2,7 +2,7 @@
 //  LoaderController.swift
 //  HomeBand
 //
-//  Created by Nicolas Gérard on 24/02/18.
+//  Created on 24/02/18.
 //  Copyright © 2018 HEH. All rights reserved.
 //
 
@@ -49,7 +49,6 @@ class LoaderController: NSObject {
         let holdingView = appDel.window!.rootViewController!.view!
         
         DispatchQueue.main.async {
-            
             self.activityIndicator.center = self.loadingView.center
             self.loadingView.center = holdingView.center
             self.loadingView.addSubview(self.activityIndicator)

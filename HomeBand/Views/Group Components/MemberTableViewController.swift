@@ -2,7 +2,7 @@
 //  MemberTableViewController.swift
 //  HomeBand
 //
-//  Created by Nicolas Gérard on 17/05/18.
+//  Created on 17/05/18.
 //  Copyright © 2018 HEH. All rights reserved.
 //
 

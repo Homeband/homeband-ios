@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  HomeBand
 //
-//  Created by Nicolas Gérard on 16/11/17.
+//  Created on 16/11/17.
 //  Copyright © 2017 HEH. All rights reserved.
 //
 
@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Configuration de Realm
         let config = Realm.Configuration(
-            schemaVersion: 8,
+            schemaVersion: 11,
             migrationBlock: { migration, oldSchemaVersion in
                 // We haven’t migrated anything yet, so oldSchemaVersion == 0
                 if (oldSchemaVersion < 1) {

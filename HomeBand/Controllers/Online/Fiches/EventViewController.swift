@@ -2,28 +2,16 @@
 //  EventViewController.swift
 //  HomeBand
 //
-//  Created by Nicolas Gérard on 27/05/18.
+//  Created on 27/05/18.
 //  Copyright © 2018 HEH. All rights reserved.
 //
 
 import UIKit
 import EventKit
+import Toucan
+import ImageLoader
 
 class EventViewController: UIViewController {
-    
-    var isLocal:Bool! = false
-    
-    var event:Evenement!
-    var address:Adresse!
-    var group:Groupe!
-    var ville:Ville!
-    var isFavourite:Bool = false
-    
-    var utilisateurDao = UtilisateurDaoImpl()!
-    var evenementDao = EvenementDaoImpl()!
-    var groupeDao = GroupeDaoImpl()!
-    var adresseDao = AdresseDaoImpl()!
-    var villeDao = VilleDaoImpl()!
     
     @IBOutlet weak var imgIllustration: UIImageView!
     @IBOutlet weak var segInfos: UISegmentedControl!
@@ -31,21 +19,44 @@ class EventViewController: UIViewController {
     @IBOutlet weak var btnFavorisRond: RadiusButton!
     @IBOutlet weak var btnFavoris: UIButton!
     
+    // Variables
+    private var isLocal:Bool! = false
+    private var ville:Ville!
+    private var isFavourite:Bool = false
+    
+    // Variables publiques
+    var event:Evenement!
+    var address:Adresse!
+    var group:Groupe!
+    
+    // DAO
+    private var utilisateurDao = UtilisateurDaoImpl()!
+    private var evenementDao = EvenementDaoImpl()!
+    private var groupeDao = GroupeDaoImpl()!
+    private var adresseDao = AdresseDaoImpl()!
+    private var villeDao = VilleDaoImpl()!
+    
+    // Subviews
     private var eventInfoView:UIView!
     private var eventDescriptionView:UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         initialisation()
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-    func initContainter(){
+    private func initialisation(){
+        self.title = self.event.nom
+        initContainter()
+        initImage()
+        
+        let user = Tools.getConnectedUser()
+        editIsFavourite(utilisateurDao.getEvent(id_utilisateurs: user!.id_utilisateurs, id_evenements: self.event.id_evenements) != nil)
+        
+        self.ville = villeDao.get(key: self.address.id_villes)
+    }
+    
+    private func initContainter(){
         self.eventInfoView = EventInformationsViewController(event: self.event, address: self.address, group: self.group).view
         self.eventDescriptionView = EventDescriptionViewController(self.event).view
         
@@ -54,17 +65,28 @@ class EventViewController: UIViewController {
         self.containerSubviews.bringSubview(toFront: self.eventDescriptionView)
     }
     
-    func initialisation(){
-        self.title = self.event.nom
-        initContainter()
+    private func initImage(){
+        var urlImg:String = Tools.NO_IMAGE_URL
         
-        let user = Tools.getConnectedUser()
-        editIsFavourite(utilisateurDao.getEvent(id_utilisateurs: user!.id_utilisateurs, id_evenements: self.event.id_evenements) != nil)
+        if(event.illustration != ""){
+            urlImg = Tools.BASE_IMAGE_EVENT_URL + event.illustration
+        }
         
-        self.ville = villeDao.get(key: self.address.id_villes)
+        let imgWidth = self.imgIllustration.frame.size.width
+        let imgHeight = self.imgIllustration.frame.size.height
+        
+        self.imgIllustration.load.request(with: urlImg, onCompletion: {image, error, operation in
+            let imageOK = Toucan(image: image!).resize(CGSize(width: imgWidth, height: imgHeight), fitMode: Toucan.Resize.FitMode.crop).image
+            
+            let transition = CATransition()
+            transition.duration = 0.5
+            transition.type = kCATransitionFade
+            self.imgIllustration.layer.add(transition, forKey: nil)
+            self.imgIllustration.image = imageOK
+        })
     }
     
-    func editIsFavourite(_ favourite:Bool){
+    private func editIsFavourite(_ favourite:Bool){
         isFavourite = favourite
         
         if(isFavourite){
@@ -95,7 +117,7 @@ class EventViewController: UIViewController {
         editIsFavourite(true)
     }
     
-    func removeFavourite(){
+    private func removeFavourite(){
         let user = Tools.getConnectedUser()
         self.utilisateurDao.deleteEvent(id_utilisateurs: user!.id_utilisateurs, id_evenements: self.event.id_evenements)
         
@@ -165,8 +187,5 @@ class EventViewController: UIViewController {
                     }
                 }
         })
-        
-        
-        
     }
 }

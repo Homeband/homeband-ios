@@ -2,7 +2,7 @@
 //  NoGroupView.swift
 //  HomeBand
 //
-//  Created by Nicolas Gérard on 6/06/18.
+//  Created on 6/06/18.
 //  Copyright © 2018 HEH. All rights reserved.
 //
 

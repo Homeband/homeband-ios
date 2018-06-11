@@ -2,7 +2,7 @@
 //  StyleDaoImpl.swift
 //  HomeBand
 //
-//  Created by Nicolas Gérard on 9/05/18.
+//  Created on 9/05/18.
 //  Copyright © 2018 HEH. All rights reserved.
 //
 

@@ -2,7 +2,7 @@
 //  Album.swift
 //  HomeBand
 //
-//  Created by Nicolas Gérard on 30/12/17.
+//  Created on 30/12/17.
 //  Copyright © 2017 HEH. All rights reserved.
 //
 

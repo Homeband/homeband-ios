@@ -34,6 +34,11 @@
 		9944062C20A7246200A5DE03 /* GroupContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9944062A20A7246200A5DE03 /* GroupContactView.swift */; };
 		9944062D20A7246200A5DE03 /* GroupContactView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9944062B20A7246200A5DE03 /* GroupContactView.xib */; };
 		9944063020A724CA00A5DE03 /* GroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9944062F20A724CA00A5DE03 /* GroupViewController.swift */; };
+		99484C9120C7EC3400051B4C /* AvisTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99484C9020C7EC3400051B4C /* AvisTableViewController.swift */; };
+		99484C9320C7ECDD00051B4C /* AvisTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99484C9220C7ECDD00051B4C /* AvisTableViewCell.swift */; };
+		99484C9520C7F4B200051B4C /* AvisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99484C9420C7F4B200051B4C /* AvisViewController.swift */; };
+		99484C9720C8045400051B4C /* NoCommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99484C9620C8045400051B4C /* NoCommentView.swift */; };
+		99484C9920C8045F00051B4C /* NoCommentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99484C9820C8045F00051B4C /* NoCommentView.xib */; };
 		994A44D4208E557D00EC7CB9 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994A44D3208E557D00EC7CB9 /* BaseModel.swift */; };
 		9953805C20ADA73100DE6495 /* MemberTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9953805A20ADA73100DE6495 /* MemberTableViewCell.swift */; };
 		9953805D20ADA73100DE6495 /* MemberTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9953805B20ADA73100DE6495 /* MemberTableViewCell.xib */; };
@@ -62,6 +67,7 @@
 		9955A2AC20C764ED00F2C5B5 /* NoGroupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9955A2AB20C764ED00F2C5B5 /* NoGroupView.xib */; };
 		9955A2AF20C7798000F2C5B5 /* AlbumTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9955A2AE20C7798000F2C5B5 /* AlbumTableViewController.swift */; };
 		9955A2B120C779DA00F2C5B5 /* AlbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9955A2B020C779DA00F2C5B5 /* AlbumTableViewCell.swift */; };
+		9955A2B320C7DF9B00F2C5B5 /* AlbumTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9955A2B220C7DF9B00F2C5B5 /* AlbumTableViewCell.xib */; };
 		99660BFA20A2EC5700C02D72 /* VilleDaoImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99660BF920A2EC5700C02D72 /* VilleDaoImpl.swift */; };
 		99660BFC20A2ED0500C02D72 /* StyleDaoImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99660BFB20A2ED0500C02D72 /* StyleDaoImpl.swift */; };
 		9977F5E51FF82B7C0034EB9C /* Utilisateur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9977F5E41FF82B7C0034EB9C /* Utilisateur.swift */; };
@@ -78,6 +84,9 @@
 		99886AB820422212000C0EB6 /* SeachGroupTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99886AB720422212000C0EB6 /* SeachGroupTableCell.swift */; };
 		99909DD0204C0EA000EAE532 /* Connectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99909DCF204C0EA000EAE532 /* Connectivity.swift */; };
 		999D5F04201B770000827A80 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 999D5F03201B770000827A80 /* Home.storyboard */; };
+		99C6A88420CC6D920019F77C /* AppDirectoryNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C6A88320CC6D920019F77C /* AppDirectoryNames.swift */; };
+		99C6A88620CC7A4F0019F77C /* SignupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C6A88520CC7A4F0019F77C /* SignupController.swift */; };
+		99C6A88820CDBAE90019F77C /* ForgetPasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C6A88720CDBAE90019F77C /* ForgetPasswordController.swift */; };
 		99D8CC7F1FBD7C1700ACE437 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D8CC7E1FBD7C1700ACE437 /* AppDelegate.swift */; };
 		99D8CC811FBD7C1700ACE437 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D8CC801FBD7C1700ACE437 /* LoginController.swift */; };
 		99D8CC871FBD7C1700ACE437 /* HomeBand.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 99D8CC851FBD7C1700ACE437 /* HomeBand.xcdatamodeld */; };
@@ -135,6 +144,11 @@
 		9944062A20A7246200A5DE03 /* GroupContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupContactView.swift; sourceTree = "<group>"; };
 		9944062B20A7246200A5DE03 /* GroupContactView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GroupContactView.xib; sourceTree = "<group>"; };
 		9944062F20A724CA00A5DE03 /* GroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewController.swift; sourceTree = "<group>"; };
+		99484C9020C7EC3400051B4C /* AvisTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvisTableViewController.swift; sourceTree = "<group>"; };
+		99484C9220C7ECDD00051B4C /* AvisTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvisTableViewCell.swift; sourceTree = "<group>"; };
+		99484C9420C7F4B200051B4C /* AvisViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvisViewController.swift; sourceTree = "<group>"; };
+		99484C9620C8045400051B4C /* NoCommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoCommentView.swift; sourceTree = "<group>"; };
+		99484C9820C8045F00051B4C /* NoCommentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoCommentView.xib; sourceTree = "<group>"; };
 		994A44D3208E557D00EC7CB9 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		9953805A20ADA73100DE6495 /* MemberTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberTableViewCell.swift; sourceTree = "<group>"; };
 		9953805B20ADA73100DE6495 /* MemberTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MemberTableViewCell.xib; sourceTree = "<group>"; };
@@ -165,6 +179,7 @@
 		9955A2AB20C764ED00F2C5B5 /* NoGroupView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoGroupView.xib; sourceTree = "<group>"; };
 		9955A2AE20C7798000F2C5B5 /* AlbumTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTableViewController.swift; sourceTree = "<group>"; };
 		9955A2B020C779DA00F2C5B5 /* AlbumTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTableViewCell.swift; sourceTree = "<group>"; };
+		9955A2B220C7DF9B00F2C5B5 /* AlbumTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlbumTableViewCell.xib; sourceTree = "<group>"; };
 		99660BF920A2EC5700C02D72 /* VilleDaoImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VilleDaoImpl.swift; sourceTree = "<group>"; };
 		99660BFB20A2ED0500C02D72 /* StyleDaoImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleDaoImpl.swift; sourceTree = "<group>"; };
 		9977F5E41FF82B7C0034EB9C /* Utilisateur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilisateur.swift; sourceTree = "<group>"; };
@@ -181,6 +196,9 @@
 		99886AB720422212000C0EB6 /* SeachGroupTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeachGroupTableCell.swift; sourceTree = "<group>"; };
 		99909DCF204C0EA000EAE532 /* Connectivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connectivity.swift; sourceTree = "<group>"; };
 		999D5F03201B770000827A80 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		99C6A88320CC6D920019F77C /* AppDirectoryNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDirectoryNames.swift; sourceTree = "<group>"; };
+		99C6A88520CC7A4F0019F77C /* SignupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupController.swift; sourceTree = "<group>"; };
+		99C6A88720CDBAE90019F77C /* ForgetPasswordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordController.swift; sourceTree = "<group>"; };
 		99D8CC7B1FBD7C1700ACE437 /* HomeBand.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeBand.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99D8CC7E1FBD7C1700ACE437 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		99D8CC801FBD7C1700ACE437 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
@@ -225,6 +243,7 @@
 				99E7DE302041A60200AC45DD /* LoaderController.swift */,
 				99E7DE322041FE2500AC45DD /* Tools.swift */,
 				99909DCF204C0EA000EAE532 /* Connectivity.swift */,
+				99C6A88320CC6D920019F77C /* AppDirectoryNames.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -287,6 +306,8 @@
 			isa = PBXGroup;
 			children = (
 				99D8CC801FBD7C1700ACE437 /* LoginController.swift */,
+				99C6A88520CC7A4F0019F77C /* SignupController.swift */,
+				99C6A88720CDBAE90019F77C /* ForgetPasswordController.swift */,
 			);
 			path = Offline;
 			sourceTree = "<group>";
@@ -360,6 +381,8 @@
 				9955A2A720C7606300F2C5B5 /* NoEventView.xib */,
 				9955A2A920C764E500F2C5B5 /* NoGroupView.swift */,
 				9955A2AB20C764ED00F2C5B5 /* NoGroupView.xib */,
+				99484C9620C8045400051B4C /* NoCommentView.swift */,
+				99484C9820C8045F00051B4C /* NoCommentView.xib */,
 			);
 			path = "New Group";
 			sourceTree = "<group>";
@@ -368,6 +391,8 @@
 			isa = PBXGroup;
 			children = (
 				9955A2AE20C7798000F2C5B5 /* AlbumTableViewController.swift */,
+				99484C9020C7EC3400051B4C /* AvisTableViewController.swift */,
+				99484C9420C7F4B200051B4C /* AvisViewController.swift */,
 			);
 			path = "Infos groupe";
 			sourceTree = "<group>";
@@ -380,6 +405,8 @@
 				99886AB720422212000C0EB6 /* SeachGroupTableCell.swift */,
 				9955A2A020C756E300F2C5B5 /* SearchGroupTableCell.xib */,
 				9955A2B020C779DA00F2C5B5 /* AlbumTableViewCell.swift */,
+				9955A2B220C7DF9B00F2C5B5 /* AlbumTableViewCell.xib */,
+				99484C9220C7ECDD00051B4C /* AvisTableViewCell.swift */,
 			);
 			path = Composants;
 			sourceTree = "<group>";
@@ -529,6 +556,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99484C9920C8045F00051B4C /* NoCommentView.xib in Resources */,
 				9955A2AC20C764ED00F2C5B5 /* NoGroupView.xib in Resources */,
 				9955A29A20C7252D00F2C5B5 /* EventTableViewCell.xib in Resources */,
 				9955A2A120C756E300F2C5B5 /* SearchGroupTableCell.xib in Resources */,
@@ -540,6 +568,7 @@
 				9944062520A7242000A5DE03 /* GroupBioView.xib in Resources */,
 				99D8CC8C1FBD7C1700ACE437 /* LaunchScreen.storyboard in Resources */,
 				99D8CC891FBD7C1700ACE437 /* Assets.xcassets in Resources */,
+				9955A2B320C7DF9B00F2C5B5 /* AlbumTableViewCell.xib in Resources */,
 				99819DE420092690004C745E /* Main.storyboard in Resources */,
 				999D5F04201B770000827A80 /* Home.storyboard in Resources */,
 				9953805D20ADA73100DE6495 /* MemberTableViewCell.xib in Resources */,
@@ -631,7 +660,9 @@
 				9955A27920C5C57F00F2C5B5 /* AlbumDao.swift in Sources */,
 				9977F5F31FF82CA30034EB9C /* Membre.swift in Sources */,
 				9955A2AF20C7798000F2C5B5 /* AlbumTableViewController.swift in Sources */,
+				99C6A88420CC6D920019F77C /* AppDirectoryNames.swift in Sources */,
 				9955A28B20C5C68B00F2C5B5 /* GroupeDaoImpl.swift in Sources */,
+				99C6A88820CDBAE90019F77C /* ForgetPasswordController.swift in Sources */,
 				9977F5F71FF8334E0034EB9C /* UtilisateurGroupe.swift in Sources */,
 				99335EF5201CC8720053E501 /* SearchController.swift in Sources */,
 				99335EFC201DF9450053E501 /* GroupSearchController.swift in Sources */,
@@ -640,6 +671,7 @@
 				99EAD5C020BAF325007C5459 /* EventViewController.swift in Sources */,
 				9977F5ED1FF82C6D0034EB9C /* Titre.swift in Sources */,
 				9944063020A724CA00A5DE03 /* GroupViewController.swift in Sources */,
+				99484C9320C7ECDD00051B4C /* AvisTableViewCell.swift in Sources */,
 				99EF992520960E6600D96B7E /* VersionDaoImpl.swift in Sources */,
 				9977F5E91FF82C4A0034EB9C /* Avis.swift in Sources */,
 				9955A28120C5C63400F2C5B5 /* MembreDaoImpl.swift in Sources */,
@@ -674,6 +706,7 @@
 				9934D8B520987714008D0A42 /* VersionDao.swift in Sources */,
 				9977F5F11FF82C930034EB9C /* Style.swift in Sources */,
 				990DC2C01FFC31C800D43945 /* Transforms.swift in Sources */,
+				99C6A88620CC7A4F0019F77C /* SignupController.swift in Sources */,
 				99909DD0204C0EA000EAE532 /* Connectivity.swift in Sources */,
 				9955A2B120C779DA00F2C5B5 /* AlbumTableViewCell.swift in Sources */,
 				9934D8B7209877CA008D0A42 /* DaoImpl.swift in Sources */,
@@ -684,6 +717,7 @@
 				99660BFC20A2ED0500C02D72 /* StyleDaoImpl.swift in Sources */,
 				99335EF1201CB77B0053E501 /* HomeController.swift in Sources */,
 				9934D8AC20987070008D0A42 /* StyleDao.swift in Sources */,
+				99484C9120C7EC3400051B4C /* AvisTableViewController.swift in Sources */,
 				9953806220ADA95C00DE6495 /* MemberTableViewController.swift in Sources */,
 				9934D8B320987419008D0A42 /* Dao.swift in Sources */,
 				9955A28D20C5CD1900F2C5B5 /* AdresseDao.swift in Sources */,
@@ -693,7 +727,9 @@
 				9955A29320C6EFCE00F2C5B5 /* UtilisateurDao.swift in Sources */,
 				9977F5E71FF82C1F0034EB9C /* Adresse.swift in Sources */,
 				99D8CC7F1FBD7C1700ACE437 /* AppDelegate.swift in Sources */,
+				99484C9520C7F4B200051B4C /* AvisViewController.swift in Sources */,
 				99D8CC871FBD7C1700ACE437 /* HomeBand.xcdatamodeld in Sources */,
+				99484C9720C8045400051B4C /* NoCommentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -2,7 +2,7 @@
 //  UtilisateurDaoImpl.swift
 //  HomeBand
 //
-//  Created by Nicolas Gérard on 5/06/18.
+//  Created on 5/06/18.
 //  Copyright © 2018 HEH. All rights reserved.
 //
 
@@ -95,11 +95,6 @@ class UtilisateurDaoImpl: UtilisateurDao {
         return nil
     }
     
-    func listGroups(id_utilisateurs:Int) -> [Groupe]? {
-        print("listGroups")
-        return nil
-    }
-    
     func addEvent(id_utilisateurs: Int, event: Evenement) {
         if(id_utilisateurs > 0){
             let user:Utilisateur? = self.realm.object(ofType: Utilisateur.self, forPrimaryKey: id_utilisateurs)
@@ -150,11 +145,6 @@ class UtilisateurDaoImpl: UtilisateurDao {
             }
         }
         
-        return nil
-    }
-    
-    func listEvents(id_utilisateurs:Int) -> [Evenement]? {
-        print("listGroups")
         return nil
     }
 }

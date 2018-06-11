@@ -2,7 +2,7 @@
 //  Utilisateur.swift
 //  HomeBand
 //
-//  Created by Nicolas Gérard on 30/12/17.
+//  Created on 30/12/17.
 //  Copyright © 2017 HEH. All rights reserved.
 //
 
@@ -11,7 +11,7 @@ import ObjectMapper
 import AlamofireObjectMapper
 import RealmSwift
 
-class Utilisateur : Object,Mappable {
+class Utilisateur : BaseModel,Mappable {
     @objc dynamic var id_utilisateurs: Int = 0
     @objc dynamic var login: String = ""
     @objc dynamic var mot_de_passe: String = ""
@@ -22,7 +22,7 @@ class Utilisateur : Object,Mappable {
     @objc dynamic var api_ck: String = ""
     @objc dynamic var est_connecte: Bool = false
     @objc dynamic var id_adresses: Int = 0
-    //let groups = LinkingObjects(fromType: Groupe.self, property: "groups")
+    
     let groups = List<Groupe>()
     let events = List<Evenement>()
     

@@ -40,104 +40,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HomeBand/Controllers/Online/Recherche/GroupSearchController.swift"
-            timestampString = "549945519.4249671"
+            timestampString = "550363582.928329"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
-            landmarkName = "GroupSearchController"
-            landmarkType = "3">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "HomeBand.GroupSearchController.searchParams.getter : Swift.Dictionary&lt;Swift.String, Any&gt;"
-                  moduleName = "HomeBand"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nicolasgerard/Documents/XCode%20Applications/HomeBand/HomeBand/Controllers/Online/Recherche/GroupSearchController.swift"
-                  timestampString = "548262823.547351"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "25"
-                  endingLineNumber = "25"
-                  offsetFromSymbolStart = "105">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "HomeBand.GroupSearchController.searchParams.setter : Swift.Dictionary&lt;Swift.String, Any&gt;"
-                  moduleName = "HomeBand"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nicolasgerard/Documents/XCode%20Applications/HomeBand/HomeBand/Controllers/Online/Recherche/GroupSearchController.swift"
-                  timestampString = "548262823.550227"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "25"
-                  endingLineNumber = "25"
-                  offsetFromSymbolStart = "110">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "HomeBand.GroupSearchController.init(style: __C.UITableViewStyle) -&gt; HomeBand.GroupSearchController"
-                  moduleName = "HomeBand"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nicolasgerard/Documents/XCode%20Applications/HomeBand/HomeBand/Controllers/Online/Recherche/GroupSearchController.swift"
-                  timestampString = "548262823.551807"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "25"
-                  endingLineNumber = "25"
-                  offsetFromSymbolStart = "319">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "HomeBand.GroupSearchController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; HomeBand.GroupSearchController"
-                  moduleName = "HomeBand"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nicolasgerard/Documents/XCode%20Applications/HomeBand/HomeBand/Controllers/Online/Recherche/GroupSearchController.swift"
-                  timestampString = "548262823.553421"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "25"
-                  endingLineNumber = "25"
-                  offsetFromSymbolStart = "340">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "HomeBand.GroupSearchController.init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;HomeBand.GroupSearchController&gt;"
-                  moduleName = "HomeBand"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nicolasgerard/Documents/XCode%20Applications/HomeBand/HomeBand/Controllers/Online/Recherche/GroupSearchController.swift"
-                  timestampString = "548262823.555187"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "25"
-                  endingLineNumber = "25"
-                  offsetFromSymbolStart = "271">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HomeBand/Controllers/Online/Recherche/GroupSearchController.swift"
-            timestampString = "549945519.425029"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -149,11 +56,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HomeBand/Controllers/Online/Recherche/GroupSearchController.swift"
-            timestampString = "549945519.425072"
+            timestampString = "550363582.928385"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "149"
-            endingLineNumber = "149"
+            startingLineNumber = "156"
+            endingLineNumber = "156"
             landmarkName = "prepare(for:sender:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -165,11 +72,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HomeBand/Controllers/Online/Fiches/GroupViewController.swift"
-            timestampString = "549945519.4251159"
+            timestampString = "550363582.928427"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "103"
-            endingLineNumber = "103"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
             landmarkName = "initContainer()"
             landmarkType = "7">
          </BreakpointContent>
@@ -181,7 +88,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HomeBand/Views/Group Components/MemberTableViewController.swift"
-            timestampString = "549942333.259266"
+            timestampString = "550363582.92847"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "16"
@@ -197,7 +104,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HomeBand/Views/Group Components/MemberTableViewController.swift"
-            timestampString = "549942333.259316"
+            timestampString = "550363582.928504"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "35"
@@ -245,7 +152,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HomeBand/Views/Group Components/MemberTableViewController.swift"
-            timestampString = "549942333.2593631"
+            timestampString = "550363582.9285361"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "39"
@@ -261,12 +168,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HomeBand/Controllers/Online/Fiches/GroupViewController.swift"
-            timestampString = "549945519.425203"
+            timestampString = "550363582.928568"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
-            landmarkName = "initInfos()"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "initialisation()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -277,7 +184,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HomeBand/Controllers/Online/SearchController.swift"
-            timestampString = "549942333.259483"
+            timestampString = "550363582.928605"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "295"
@@ -293,7 +200,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HomeBand/Controllers/Online/SearchController.swift"
-            timestampString = "549942333.259526"
+            timestampString = "550363582.9286391"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "309"
@@ -309,11 +216,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HomeBand/Controllers/Online/Recherche/EventTableViewController.swift"
-            timestampString = "549942333.259571"
+            timestampString = "550363582.928671"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -325,7 +232,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HomeBand/Controllers/Online/Fiches/EventViewController.swift"
-            timestampString = "549942333.25963"
+            timestampString = "550363582.928708"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "6"
@@ -341,11 +248,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HomeBand/Controllers/Online/Recherche/EventTableViewController.swift"
-            timestampString = "549942333.259703"
+            timestampString = "550363582.928743"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "103"
-            endingLineNumber = "103"
+            startingLineNumber = "129"
+            endingLineNumber = "129"
             landmarkName = "prepare(for:sender:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -357,11 +264,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HomeBand/Controllers/Online/Recherche/EventTableViewController.swift"
-            timestampString = "549942333.259755"
+            timestampString = "550363582.928774"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "104"
-            endingLineNumber = "104"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
             landmarkName = "prepare(for:sender:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -373,27 +280,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HomeBand/Controllers/Online/Fiches/GroupViewController.swift"
-            timestampString = "549945519.4253139"
+            timestampString = "550363582.928805"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "256"
-            endingLineNumber = "256"
-            landmarkName = "segInfosChanged(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HomeBand/Controllers/Online/Fiches/GroupViewController.swift"
-            timestampString = "549945519.4253629"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "200"
-            endingLineNumber = "200"
+            startingLineNumber = "262"
+            endingLineNumber = "262"
             landmarkName = "removeFavourite()"
             landmarkType = "7">
          </BreakpointContent>
@@ -405,27 +296,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HomeBand/Controllers/Online/Fiches/GroupViewController.swift"
-            timestampString = "549945519.425406"
+            timestampString = "550363582.92884"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "200"
-            endingLineNumber = "200"
-            landmarkName = "removeFavourite()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HomeBand/Controllers/Online/Fiches/GroupViewController.swift"
-            timestampString = "549945519.42545"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "154"
-            endingLineNumber = "154"
+            startingLineNumber = "206"
+            endingLineNumber = "206"
             landmarkName = "addFavourite()"
             landmarkType = "7">
          </BreakpointContent>
@@ -437,11 +312,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HomeBand/Controllers/Online/Fiches/GroupViewController.swift"
-            timestampString = "549945519.425493"
+            timestampString = "550363582.928874"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "155"
-            endingLineNumber = "155"
+            startingLineNumber = "206"
+            endingLineNumber = "206"
             landmarkName = "addFavourite()"
             landmarkType = "7">
          </BreakpointContent>
@@ -453,11 +328,43 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HomeBand/Controllers/Online/Fiches/GroupViewController.swift"
-            timestampString = "549945519.4255379"
+            timestampString = "550363582.928907"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "156"
-            endingLineNumber = "156"
+            startingLineNumber = "160"
+            endingLineNumber = "160"
+            landmarkName = "addFavourite()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HomeBand/Controllers/Online/Fiches/GroupViewController.swift"
+            timestampString = "550363582.928952"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "161"
+            endingLineNumber = "161"
+            landmarkName = "addFavourite()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HomeBand/Controllers/Online/Fiches/GroupViewController.swift"
+            timestampString = "550363582.929001"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "162"
+            endingLineNumber = "162"
             landmarkName = "addFavourite()"
             landmarkType = "7">
          </BreakpointContent>
@@ -469,7 +376,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HomeBand/AppDelegate.swift"
-            timestampString = "549942333.260172"
+            timestampString = "550363582.92904"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "13"
@@ -485,7 +392,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HomeBand/AppDelegate.swift"
-            timestampString = "549942333.260221"
+            timestampString = "550363582.929081"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "31"
@@ -501,7 +408,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HomeBand/Controllers/Offline/LoginController.swift"
-            timestampString = "549942333.260271"
+            timestampString = "550363582.929112"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "54"
@@ -517,7 +424,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HomeBand/DaoImpl/UtilisateurDaoImpl.swift"
-            timestampString = "549942333.260332"
+            timestampString = "550363582.929147"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "122"
@@ -533,7 +440,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HomeBand/DaoImpl/EvenementDaoImpl.swift"
-            timestampString = "549942333.260376"
+            timestampString = "550363582.929178"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "51"
@@ -548,44 +455,12 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "HomeBand/Controllers/Online/Fiches/EventViewController.swift"
-            timestampString = "549942333.260419"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "140"
-            endingLineNumber = "140"
-            landmarkName = "onClickAddCalendar(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HomeBand/Controllers/Online/Fiches/EventViewController.swift"
-            timestampString = "549942333.260468"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "145"
-            endingLineNumber = "145"
-            landmarkName = "onClickAddCalendar(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "HomeBand/Controllers/Online/HomeController.swift"
-            timestampString = "549942333.2605129"
+            timestampString = "550363582.929211"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
             landmarkName = "viewWillAppear(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -597,12 +472,172 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HomeBand/Controllers/Online/Fiches/GroupViewController.swift"
-            timestampString = "549945519.425668"
+            timestampString = "550363582.929243"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "387"
-            endingLineNumber = "387"
+            startingLineNumber = "426"
+            endingLineNumber = "426"
             landmarkName = "prepare(for:sender:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HomeBand/Controllers/Online/Infos groupe/AvisTableViewController.swift"
+            timestampString = "550363582.92928"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HomeBand/Controllers/Online/Infos groupe/AvisViewController.swift"
+            timestampString = "550363582.9293129"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "onClickEnvoyer(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HomeBand/Controllers/Online/Infos groupe/AvisViewController.swift"
+            timestampString = "550363582.929346"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "onClickEnvoyer(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HomeBand/Controllers/Online/Recherche/GroupSearchController.swift"
+            timestampString = "550363582.929376"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HomeBand.GroupSearchController.tableView(__ObjC.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __ObjC.UITableViewCell"
+                  moduleName = "HomeBand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nicolasgerard/Documents/XCode%20Applications/HomeBand/HomeBand/Controllers/Online/Recherche/GroupSearchController.swift"
+                  timestampString = "550264748.674916"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "70"
+                  endingLineNumber = "70"
+                  offsetFromSymbolStart = "7236">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__ObjC.UIImage&gt;, Swift.Optional&lt;Swift.Error&gt;, ImageLoader.FetchOperation) -&gt; () in HomeBand.GroupSearchController.tableView(__ObjC.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __ObjC.UITableViewCell"
+                  moduleName = "HomeBand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nicolasgerard/Documents/XCode%20Applications/HomeBand/HomeBand/Controllers/Online/Recherche/GroupSearchController.swift"
+                  timestampString = "550264748.676515"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "41">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HomeBand/Controllers/Offline/SignupController.swift"
+            timestampString = "550363582.92941"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "exitView()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HomeBand/Controllers/Offline/SignupController.swift"
+            timestampString = "550363582.929442"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "onClickValider(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HomeBand/Models/BaseModel.swift"
+            timestampString = "550363582.929474"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "toDictionary()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HomeBand/Controllers/Online/SettingsController.swift"
+            timestampString = "550363582.929508"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
+            landmarkName = "onClickModifier(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

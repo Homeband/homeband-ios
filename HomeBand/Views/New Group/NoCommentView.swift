@@ -1,5 +1,5 @@
 //
-//  NoEvents.swift
+//  NoCommentView.swift
 //  HomeBand
 //
 //  Created on 6/06/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NoEventView: UIView {
+class NoCommentView: UIView {
 
     @IBOutlet var containerView: UIView!
     
@@ -23,7 +23,7 @@ class NoEventView: UIView {
     }
     
     func initialisation(){
-        Bundle.main.loadNibNamed("NoEventView", owner: self, options: nil)
+        Bundle.main.loadNibNamed("NoCommentView", owner: self, options: nil)
         addSubview(containerView)
         containerView.frame = self.bounds
         containerView.autoresizingMask = [.flexibleHeight, .flexibleWidth]

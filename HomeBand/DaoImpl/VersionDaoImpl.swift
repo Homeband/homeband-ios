@@ -2,7 +2,7 @@
 //  VersionDAO.swift
 //  HomeBand
 //
-//  Created by Nicolas Gérard on 29/04/18.
+//  Created on 29/04/18.
 //  Copyright © 2018 HEH. All rights reserved.
 //
 

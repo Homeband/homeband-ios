@@ -2,7 +2,7 @@
 //  Ville.swift
 //  HomeBand
 //
-//  Created by Nicolas Gérard on 29/11/17.
+//  Created on 29/11/17.
 //  Copyright © 2017 HEH. All rights reserved.
 //
 

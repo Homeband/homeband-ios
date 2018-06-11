@@ -2,7 +2,7 @@
 //  EventTableViewCell.swift
 //  HomeBand
 //
-//  Created by Nicolas Gérard on 24/05/18.
+//  Created on 24/05/18.
 //  Copyright © 2018 HEH. All rights reserved.
 //
 
@@ -17,12 +17,11 @@ class EventTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        // Configure the view for the selected state
     }
+
 
 }

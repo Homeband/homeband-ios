@@ -2,7 +2,7 @@
 //  HomeController.swift
 //  HomeBand
 //
-//  Created by Nicolas Gérard on 27/01/18.
+//  Created on 27/01/18.
 //  Copyright © 2018 HEH. All rights reserved.
 //
 
@@ -11,30 +11,32 @@ import UIKit
 import Alamofire
 import ObjectMapper
 import AlamofireObjectMapper
-import RealmSwift
+import Toucan
+import ImageLoader
 
 class HomeController: UITableViewController{
     
-    var events:[Evenement]!
-    var user = Tools.getConnectedUser()!
+    // Variables
+    private var dateFormatter:DateFormatter!
+    private var user = Tools.getConnectedUser()!
     
+    // Variables publiques
+    var events:[Evenement]!
+    
+    // DAO
     private let evenementDao = EvenementDaoImpl()!
     private let groupeDao = GroupeDaoImpl()!
     private let adresseDao = AdresseDaoImpl()!
     private let villeDao = VilleDaoImpl()!
     
-    private var dateFormatter:DateFormatter!
-    
     override func viewDidLoad() {
-        
         if(!Tools.isAppInitialized()){
             LoaderController.sharedInstance.showLoader()
             Tools.updateStyles()
             Tools.updateVilles()
             LoaderController.sharedInstance.removeLoader()
         } else {
-            
-            //if(Tools.getReferencesUpdates(completion: <#T##([Version]) -> ()#>))
+            // Check updates
         }
         
         self.dateFormatter = DateFormatter()
@@ -77,6 +79,7 @@ class HomeController: UITableViewController{
         
         // Liaison de informations à l'interface
         cell.lbNom.text = event.nom
+        cell.lbDate.text = self.dateFormatter.string(from: event.date_heure)
         
         if(ville != nil){
             cell.lbVille.text = ville?.nom
@@ -85,6 +88,25 @@ class HomeController: UITableViewController{
         }
         
         cell.lbDate.text = self.dateFormatter.string(from: event.date_heure)
+        
+        var urlImg:String = Tools.NO_IMAGE_URL
+        
+        if(event.illustration != ""){
+            urlImg = Tools.BASE_IMAGE_EVENT_URL + event.illustration
+        }
+        
+        let imgWidth = cell.imgEvent.frame.size.width
+        let imgHeight = cell.imgEvent.frame.size.height
+        
+        cell.imgEvent.load.request(with: urlImg, onCompletion: { image, error, operation in
+            let imageOK = Toucan(image: image!).resize(CGSize(width: imgWidth, height: imgHeight), fitMode: Toucan.Resize.FitMode.crop).image
+            
+            let transition = CATransition()
+            transition.duration = 0.5
+            transition.type = kCATransitionFade
+            cell.imgEvent.layer.add(transition, forKey: nil)
+            cell.imgEvent.image = imageOK
+        })
         
         return cell
     }

@@ -2,7 +2,7 @@
 //  Groupe.swift
 //  HomeBand
 //
-//  Created by Nicolas Gérard on 29/11/17.
+//  Created on 29/11/17.
 //  Copyright © 2017 HEH. All rights reserved.
 //
 
@@ -27,8 +27,8 @@ class Groupe : Object,Mappable {
     @objc dynamic var lien_twitter: String = ""
     @objc dynamic var lien_instagram: String = ""
     @objc dynamic var lien_facebook: String = ""
-    @objc dynamic var date_maj: String = ""
-    @objc dynamic var illustration: Data = Data()
+    @objc dynamic var date_maj: Date = Date()
+    @objc dynamic var illustration: String = ""
     @objc dynamic var est_actif: Bool = false
     @objc dynamic var id_style: Int = 0
     @objc dynamic var id_villes: Int = 0
@@ -56,6 +56,8 @@ class Groupe : Object,Mappable {
         lien_twitter <- map["lien_twitter"]
         lien_instagram <- map["lien_instagram"]
         lien_facebook <- map["lien_facebook"]
+        date_maj <- (map["date_maj"], DateTimeTransform())
+        illustration <- map["illustration"]
         est_actif <- (map["est_actif"], BooleanTransform())
         id_style <- (map["id_styles"], IntTransform())
         id_villes <- (map["id_villes"], IntTransform())

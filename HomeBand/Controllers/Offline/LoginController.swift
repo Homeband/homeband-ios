@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  HomeBand
 //
-//  Created by Nicolas Gérard on 16/11/17.
+//  Created on 16/11/17.
 //  Copyright © 2017 HEH. All rights reserved.
 //
 
@@ -54,7 +54,10 @@ class LoginController: UIViewController, UITextFieldDelegate {
                 connexion(sender:sender)
                 
             case "SignupTransition" :
-                inscription(sender:sender)
+                return true
+            
+            case "ForgetPasswordSegue" :
+                return true
                 
             default :
                 print("Identifiant inconnu !")

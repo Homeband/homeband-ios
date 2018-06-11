@@ -2,7 +2,7 @@
 //  HomebandColor.swift
 //  HomeBand
 //
-//  Created by Nicolas Gérard on 28/01/18.
+//  Created on 28/01/18.
 //  Copyright © 2018 HEH. All rights reserved.
 //
 
@@ -18,8 +18,6 @@ extension UIColor{
         assert(blue >= 0 && blue <= 255, "Invalid blue component")
         self.init(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: alpha)
     }
-    
-    
     
     convenience init(hex:Int, alpha: CGFloat = 1.0){
         self.init(red:(hex >> 16) & 0xff, green:(hex >> 8) & 0xff, blue:hex & 0xff, alpha: alpha)
@@ -59,24 +57,35 @@ extension Results {
 }
 
 extension Date {
+    
+    // J-1
     var yesterday: Date {
         return Calendar.current.date(byAdding: .day, value: -1, to: noon)!
     }
+    
+    // J+1
     var tomorrow: Date {
         return Calendar.current.date(byAdding: .day, value: 1, to: noon)!
     }
+    
+    // 12:00
     var noon: Date {
         return Calendar.current.date(bySettingHour: 12, minute: 0, second: 0, of: self)!
     }
+    
+    // Mois
     var month: Int {
         return Calendar.current.component(.month,  from: self)
     }
+    
+    // Dernier jour du mois ?
     var isLastDayOfMonth: Bool {
         return tomorrow.month != month
     }
 }
 
 extension String {
+    // 1ère lettre majuscule
     func capitalizingFirstLetter() -> String {
         return prefix(1).uppercased() + dropFirst()
     }

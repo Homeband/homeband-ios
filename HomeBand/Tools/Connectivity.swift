@@ -2,7 +2,7 @@
 //  Connectivity.swift
 //  HomeBand
 //
-//  Created by Nicolas Gérard on 4/03/18.
+//  Created on 4/03/18.
 //  Copyright © 2018 HEH. All rights reserved.
 //
 

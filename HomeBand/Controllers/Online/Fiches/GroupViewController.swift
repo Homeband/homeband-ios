@@ -2,7 +2,7 @@
 //  GroupViewController.swift
 //  HomeBand
 //
-//  Created by Nicolas Gérard on 12/05/18.
+//  Created on 12/05/18.
 //  Copyright © 2018 HEH. All rights reserved.
 //
 
@@ -24,28 +24,32 @@ class GroupViewController: UIViewController {
     @IBOutlet weak var btnFavorisRond: RadiusButton!
     @IBOutlet weak var btnFavoris: UIButton!
     
-    var user:Utilisateur! = Tools.getConnectedUser()
-    var group:Groupe!
-    var members:[Membre]!
-    var isFavourite:Bool = false
+    // Variables
+    private var user:Utilisateur! = Tools.getConnectedUser()
+    private var isFavourite:Bool = false
     
-    var groupBioView: UIView!
-    var groupMembersView: UIView!
-    var groupContactView: UIView!
+    // Subviews
+    private var groupBioView: UIView!
+    private var groupMembersView: UIView!
+    private var groupContactView: UIView!
     
-    let utilisateurDao = UtilisateurDaoImpl()
-    let evenementDao = EvenementDaoImpl()!
-    let groupeDao = GroupeDaoImpl()!
-    let membreDao = MembreDaoImpl()!
-    let villeDao = VilleDaoImpl()!
-    let styleDao = StyleDaoImpl()!
-    let albumDao = AlbumDaoImpl()!
-    let titreDao = TitreDaoImpl()!
-    let utilisateurGroupeDao = UtilisateurGroupeDaoImpl()!
+    // DAO
+    private let utilisateurDao = UtilisateurDaoImpl()
+    private let evenementDao = EvenementDaoImpl()!
+    private let groupeDao = GroupeDaoImpl()!
+    private let membreDao = MembreDaoImpl()!
+    private let villeDao = VilleDaoImpl()!
+    private let styleDao = StyleDaoImpl()!
+    private let albumDao = AlbumDaoImpl()!
+    private let titreDao = TitreDaoImpl()!
+    private let utilisateurGroupeDao = UtilisateurGroupeDaoImpl()!
     
+    // Variables publiques
     var events:[Evenement]?
     var albums:[Album]?
     var avis:[Avis]?
+    var group:Groupe!
+    var members:[Membre]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,15 +58,13 @@ class GroupViewController: UIViewController {
     
     // MARK - Fonctions
     
-    func initialisation(){
-        
+    private func initialisation(){
         initImage()
         initInfos()
         initContainer()
     }
     
-    func initInfos(){
-        //self.lbNomGroupe.text = self.group.nom
+    private func initInfos(){
         
         let ville:Ville? = villeDao.get(key: self.group.id_villes)
         if(ville != nil){
@@ -81,13 +83,17 @@ class GroupViewController: UIViewController {
         editIsFavourite(utilisateurDao?.getGroup(id_utilisateurs: self.user.id_utilisateurs, id_group: self.group.id_groupes) != nil)
     }
     
-    func initImage(){
-        let urlImage = "http://www.radio2m.ma/wp-content/uploads/2015/11/musique-non-stop2.jpg"
+    private func initImage(){
+        var urlImg:String = Tools.NO_IMAGE_URL
+        
+        if(group.illustration != ""){
+            urlImg = Tools.BASE_IMAGE_GROUP_URL + group.illustration
+        }
         
         let imgWidth = self.imgGroupe.frame.size.width
         let imgHeight = self.imgGroupe.frame.size.height
         
-        self.imgGroupe.load.request(with: urlImage, onCompletion: {image, error, operation in
+        self.imgGroupe.load.request(with: urlImg, onCompletion: {image, error, operation in
             let imageOK = Toucan(image: image!).resize(CGSize(width: imgWidth, height: imgHeight), fitMode: Toucan.Resize.FitMode.crop).image
             
             let transition = CATransition()
@@ -98,7 +104,7 @@ class GroupViewController: UIViewController {
         })
     }
     
-    func initContainer(){
+    private func initContainer(){
         self.groupBioView = GroupBioView(group).view
         self.groupMembersView = MemberTableViewController(members).view
         self.groupContactView = GroupContactView(group).view
@@ -110,7 +116,7 @@ class GroupViewController: UIViewController {
         self.containerInfos.bringSubview(toFront: self.groupBioView)
     }
     
-    func editIsFavourite(_ favourite:Bool){
+    private func editIsFavourite(_ favourite:Bool){
         isFavourite = favourite
         
         if(isFavourite){
@@ -126,7 +132,7 @@ class GroupViewController: UIViewController {
         }
     }
     
-    func addFavourite(){
+    private func addFavourite(){
         // Affichage du loader
         LoaderController.sharedInstance.showLoader()
         
@@ -200,7 +206,7 @@ class GroupViewController: UIViewController {
         }
     }
     
-    func removeFavourite(){
+    private func removeFavourite(){
         // Affichage du loader
         LoaderController.sharedInstance.showLoader()
         
@@ -371,6 +377,39 @@ class GroupViewController: UIViewController {
         }
     }
     
+    @IBAction func onClickAvis(_ sender: Any) {
+        let url : String! = Tools.BASE_API_URL + "groupes/" + String(self.group.id_groupes) + "/avis"
+        
+        LoaderController.sharedInstance.showLoader(text: "Recherche en cours...")
+        let params:Parameters = [
+            "type": 1
+        ]
+        
+        let response = Alamofire.request(url, method: .get,parameters: params, headers: Tools.getHeaders()).responseJSON()
+        
+        LoaderController.sharedInstance.removeLoader()
+        
+        if (response.result.isSuccess) {
+            
+            // Récupération du résultat JSON en un tableau associatif
+            let result = response.result.value as! [String:Any]
+            
+            // Récupération et vérification du statut de la requete
+            let status = result["status"] as! Bool
+            if(status){
+                
+                // Récupération des albums dans la réponse
+                self.avis = Mapper<Avis>().mapArray(JSONObject: result["comments"])
+                
+                let segueID = "ShowGroupComments"
+                performSegue(withIdentifier: segueID, sender: self)
+                
+            } else {
+                print(result["message"] as! String)
+            }
+        }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         LoaderController.sharedInstance.showLoader()
         
@@ -379,12 +418,17 @@ class GroupViewController: UIViewController {
         switch(segueID){
         case "ShowGroupEvents":
             let destination = segue.destination as? EventTableViewController
-            destination?.events = events
+            destination?.events = self.events
             
             break
         case "ShowGroupAlbums":
             let destination = segue.destination as? AlbumTableViewController
-            destination?.albums = albums
+            destination?.albums = self.albums
+            
+        case "ShowGroupComments":
+            let destination = segue.destination as? AvisTableViewController
+            destination?.avis = self.avis
+            destination?.id_groupes = self.group.id_groupes
             
         default:
             print("Bad SegueID")

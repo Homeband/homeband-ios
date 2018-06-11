@@ -2,7 +2,7 @@
 //  EventTableViewController.swift
 //  HomeBand
 //
-//  Created by Nicolas Gérard on 24/05/18.
+//  Created on 24/05/18.
 //  Copyright © 2018 HEH. All rights reserved.
 //
 
@@ -11,15 +11,24 @@ import ObjectMapper
 import Alamofire
 import Alamofire_Synchronous
 import AlamofireObjectMapper
+import ImageLoader
+import Toucan
 
 class EventTableViewController: UITableViewController {
 
+    // Variables publiques
     var events:[Evenement]!
     
-    private let villeDao:VilleDaoImpl! = VilleDaoImpl()
+    // Variables
+    private let dateFormatter = DateFormatter()
+    
+    // DAO
+    private let adresseDao = AdresseDaoImpl()!
+    private let villeDao = VilleDaoImpl()!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        dateFormatter.dateFormat = "dd/MM/yyyy HH:mm"
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -45,12 +54,11 @@ class EventTableViewController: UITableViewController {
         
         // Récupération de l'évènement courant
         let event = self.events[indexPath.row]
-        
-        // Récupération de la ville sur le téléphone
         let ville = self.villeDao.get(key: event.id_villes)
         
         // Liaison de informations à l'interface
         cell.lbNom.text = event.nom
+        cell.lbDate.text = dateFormatter.string(from: event.date_heure)
         
         if(ville != nil){
             cell.lbVille.text = ville?.nom
@@ -58,6 +66,24 @@ class EventTableViewController: UITableViewController {
             cell.lbVille.text = ""
         }
         
+        var urlImg:String = Tools.NO_IMAGE_URL
+        
+        if(event.illustration != ""){
+            urlImg = Tools.BASE_IMAGE_EVENT_URL + event.illustration
+        }
+        
+        let imgWidth = cell.imgEvent.frame.size.width
+        let imgHeight = cell.imgEvent.frame.size.height
+        
+        cell.imgEvent.load.request(with: urlImg, onCompletion: { image, error, operation in
+            let imageOK = Toucan(image: image!).resize(CGSize(width: imgWidth, height: imgHeight), fitMode: Toucan.Resize.FitMode.crop).image
+            
+            let transition = CATransition()
+            transition.duration = 0.5
+            transition.type = kCATransitionFade
+            cell.imgEvent.layer.add(transition, forKey: nil)
+            cell.imgEvent.image = imageOK
+        })
 
         return cell
     }
