@@ -53,7 +53,8 @@ class GroupeDaoImpl: GroupeDao {
     func isUsed(key:Int) -> Bool{
         let group:Groupe? = self.realm.object(ofType: Groupe.self, forPrimaryKey: key)
         if(group != nil){
-            return (group!.evenements.count > 0 || group!.utilisateurs.count > 0)
+            let filter = "id_groupes == " + String(key)
+            return (self.realm.objects(Evenement.self).filter(filter).count > 0 || group!.utilisateurs.count > 0)
         }
         
         return false

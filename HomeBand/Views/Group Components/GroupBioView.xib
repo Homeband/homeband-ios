@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -54,7 +53,7 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                             <connections>
-                                <action selector="onClickSocialMedia:" destination="-1" eventType="touchUpInside" id="1Wl-w4-4EM"/>
+                                <action selector="onClickFacebook:" destination="-1" eventType="touchUpInside" id="kqS-Vb-4vY"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zux-BI-t4F" customClass="RadiusButton" customModule="HomeBand" customModuleProvider="target">
@@ -75,7 +74,7 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                             <connections>
-                                <action selector="onClickSocialMedia:" destination="-1" eventType="touchUpInside" id="yyo-0R-QJy"/>
+                                <action selector="onClickTwitter:" destination="-2" eventType="touchUpInside" id="tbP-kf-Uhr"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dL0-Xz-4LS" customClass="RadiusButton" customModule="HomeBand" customModuleProvider="target">
@@ -95,7 +94,7 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                             <connections>
-                                <action selector="onClickSocialMedia:" destination="-1" eventType="touchUpInside" id="wAj-K1-KRM"/>
+                                <action selector="onClickInstagram:" destination="-2" eventType="touchUpInside" id="AqU-V2-gs8"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ju8-uG-2nQ" customClass="RadiusButton" customModule="HomeBand" customModuleProvider="target">
@@ -116,7 +115,7 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                             <connections>
-                                <action selector="onClickSocialMedia:" destination="-1" eventType="touchUpInside" id="GdS-Ir-XW5"/>
+                                <action selector="onClickYoutube:" destination="-2" eventType="touchUpInside" id="Wpc-gR-Bc4"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y48-zq-J6O" customClass="RadiusButton" customModule="HomeBand" customModuleProvider="target">
@@ -137,7 +136,7 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                             <connections>
-                                <action selector="onClickSocialMedia:" destination="-1" eventType="touchUpInside" id="oVc-9g-Uh5"/>
+                                <action selector="onClickSpotify:" destination="-2" eventType="touchUpInside" id="mDK-DJ-CJV"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6G8-pz-G1r" customClass="RadiusButton" customModule="HomeBand" customModuleProvider="target">
@@ -158,7 +157,7 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                             <connections>
-                                <action selector="onClickSocialMedia:" destination="-1" eventType="touchUpInside" id="np2-Rb-bGC"/>
+                                <action selector="onClickBandcamp:" destination="-2" eventType="touchUpInside" id="stX-Gj-CQY"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wyH-yV-Wg2" customClass="RadiusButton" customModule="HomeBand" customModuleProvider="target">
@@ -179,7 +178,7 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                             <connections>
-                                <action selector="onClickSocialMedia:" destination="-1" eventType="touchUpInside" id="hyl-3s-Vmx"/>
+                                <action selector="onClickSoundcloud:" destination="-2" eventType="touchUpInside" id="6kX-5Y-wAq"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LSy-JK-FyI" customClass="RadiusButton" customModule="HomeBand" customModuleProvider="target">
@@ -198,9 +197,6 @@
                                     <real key="value" value="18"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
-                            <connections>
-                                <action selector="onClickSocialMedia:" destination="-1" eventType="touchUpInside" id="2GD-M3-ZIR"/>
-                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

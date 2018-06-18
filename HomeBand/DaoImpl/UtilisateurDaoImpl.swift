@@ -62,7 +62,6 @@ class UtilisateurDaoImpl: UtilisateurDao {
         if(id_utilisateurs > 0){
             let user:Utilisateur? = self.realm.object(ofType: Utilisateur.self, forPrimaryKey: id_utilisateurs)
             if(user != nil){
-                //
                 let filter = "id_groupes == " + String(id_groupes)
                 let group:Groupe? = user!.groups.filter(filter).first
                 if(group != nil){
@@ -70,7 +69,7 @@ class UtilisateurDaoImpl: UtilisateurDao {
                     try? self.realm.write {
                         user!.groups.remove(at: pos!)
                         
-                        if(group!.utilisateurs.count == 0 && group!.evenements.count == 0){
+                        if(group!.utilisateurs.count == 0 && self.realm.objects(Evenement.self).filter(filter).count == 0){
                             realm.delete(group!)
                         }
                     }

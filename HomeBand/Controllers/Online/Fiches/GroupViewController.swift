@@ -29,7 +29,7 @@ class GroupViewController: UIViewController {
     private var isFavourite:Bool = false
     
     // Subviews
-    private var groupBioView: UIView!
+    private var groupBioView: GroupBioView!
     private var groupMembersView: UIView!
     private var groupContactView: UIView!
     
@@ -105,15 +105,17 @@ class GroupViewController: UIViewController {
     }
     
     private func initContainer(){
-        self.groupBioView = GroupBioView(group).view
+        self.groupBioView = GroupBioView(group)
         self.groupMembersView = MemberTableViewController(members).view
         self.groupContactView = GroupContactView(group).view
         
-        self.containerInfos.addSubview(self.groupBioView)
+        //self.groupBioView.btnFacebook.addTarget(self, action: Selector(("btnFacebookClick")), for: .touchUpInside)
+        
+        self.containerInfos.addSubview(self.groupBioView.view)
         self.containerInfos.addSubview(self.groupMembersView)
         self.containerInfos.addSubview(self.groupContactView)
         
-        self.containerInfos.bringSubview(toFront: self.groupBioView)
+        self.containerInfos.bringSubview(toFront: self.groupBioView.view)
     }
     
     private func editIsFavourite(_ favourite:Bool){
@@ -165,6 +167,7 @@ class GroupViewController: UIViewController {
                     //self.groupeDao.write(obj: self.group, update: true)
                     let user = Tools.getConnectedUser()
                     self.utilisateurDao?.addGroup(id_utilisateurs: user!.id_utilisateurs, group: self.group)
+                    self.groupeDao.write(obj: Groupe(value: self.group), update: true)
                     
                     for member in self.members {
                         self.membreDao.write(obj: Membre(value: member), update: true)
@@ -226,6 +229,7 @@ class GroupViewController: UIViewController {
                 // Traitement du résultat
                 if(status){
                     let user = Tools.getConnectedUser()
+                    
                     self.utilisateurDao?.deleteGroup(id_utilisateurs: user!.id_utilisateurs, id_groupes: self.group.id_groupes)
                     
                     if(!self.groupeDao.isUsed(key: self.group.id_groupes)){
@@ -267,7 +271,7 @@ class GroupViewController: UIViewController {
     @IBAction func segInfosChanged(_ sender: UISegmentedControl) {
         switch segInfos.selectedSegmentIndex {
         case 0:
-            self.containerInfos.bringSubview(toFront: self.groupBioView)
+            self.containerInfos.bringSubview(toFront: self.groupBioView.view)
             break
         case 1:
             self.containerInfos.bringSubview(toFront: self.groupMembersView)
@@ -436,6 +440,10 @@ class GroupViewController: UIViewController {
         }
         
         LoaderController.sharedInstance.removeLoader()
+    }
+    
+    func btnFacebookClick(sender:UIButton){
+        print("Pression OK")
     }
     
 }

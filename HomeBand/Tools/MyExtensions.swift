@@ -94,3 +94,15 @@ extension String {
         self = self.capitalizingFirstLetter()
     }
 }
+
+extension UIApplication {
+    class func tryURL(urls: [String]) {
+        let application = UIApplication.shared
+        for url in urls {
+            if application.canOpenURL(URL(string: url)!) {
+                application.open(URL(string: url)!, options: [:], completionHandler: nil)
+                return
+            }
+        }
+    }
+}

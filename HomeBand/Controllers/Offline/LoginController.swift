@@ -33,8 +33,8 @@ class LoginController: UIViewController, UITextFieldDelegate {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        tfLogin.text = "Nicolas"
-        tfPassword.text = "Test123*"
+        //tfLogin.text = "Nicolas"
+        //tfPassword.text = "Test123*"
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

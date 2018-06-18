@@ -25,7 +25,7 @@ class SignupController: UIViewController, UITextFieldDelegate {
         self.tfEmail.delegate = self
         self.tfLogin.delegate = self
         self.tfPass.delegate = self
-        self.tfPass.delegate = self
+        self.tfConfirmation.delegate = self
     }
     
     @IBAction func onClickValider(_ sender: Any) {
@@ -48,6 +48,7 @@ class SignupController: UIViewController, UITextFieldDelegate {
                     
                     let resultat = response.result.value as! [String:Any]
                     let status = resultat["status"] as! Bool
+                    let message = resultat["message"] as! String
                     
                     if(status){
                         let titre = "Inscription réussie !"
@@ -58,9 +59,22 @@ class SignupController: UIViewController, UITextFieldDelegate {
                         
                         alert.addAction(actionOK)
                         self.present(alert, animated: true, completion: nil)
+                    } else {
+                        let titre = "Echec de l'inscription"
+                        let alert = UIAlertController(title: titre, message: message, preferredStyle: .alert)
+                        let actionOK = UIAlertAction(title: "OK", style: .default, handler: nil)
+                        
+                        alert.addAction(actionOK)
+                        self.present(alert, animated: true, completion: nil)
                     }
                 } else {
+                    let titre = "Echec de l'inscription"
+                    let message = "Une erreur s'est produite lors de l'inscription"
+                    let alert = UIAlertController(title: titre, message: message, preferredStyle: .alert)
+                    let actionOK = UIAlertAction(title: "OK", style: .default, handler: nil)
                     
+                    alert.addAction(actionOK)
+                    self.present(alert, animated: true, completion: nil)
                 }
             }
         }

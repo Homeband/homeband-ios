@@ -43,6 +43,7 @@ class GroupBioView: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //UIApplication.
         checkButtons()
         initBio()
         // Do any additional setup after loading the view.
@@ -61,6 +62,7 @@ class GroupBioView: UIViewController {
         // Facebook
         if(self.group.lien_facebook != ""){
             self.btnFacebook.backgroundColor = self.facebookColor
+            self.btnFacebook.isEnabled = true
         } else {
             self.btnFacebook.isEnabled = false
         }
@@ -68,6 +70,7 @@ class GroupBioView: UIViewController {
         // Twitter
         if(self.group.lien_twitter != ""){
             self.btnTwitter.backgroundColor = self.twitterColor
+            self.btnTwitter.isEnabled = true
         } else {
             self.btnTwitter.isEnabled = false
         }
@@ -75,6 +78,7 @@ class GroupBioView: UIViewController {
         // Instagram
         if(self.group.lien_instagram != ""){
             self.btnInstagram.backgroundColor = self.instagramColor
+            self.btnInstagram.isEnabled = true
         } else {
             self.btnInstagram.isEnabled = false
         }
@@ -82,6 +86,7 @@ class GroupBioView: UIViewController {
         // Youtube
         if(self.group.lien_youtube != ""){
             self.btnYoutube.backgroundColor = self.youtubeColor
+            self.btnYoutube.isEnabled = true
         } else {
             self.btnYoutube.isEnabled = false
         }
@@ -89,6 +94,7 @@ class GroupBioView: UIViewController {
         // Spotify
         if(self.group.lien_spotify != ""){
             self.btnSpotify.backgroundColor = self.spotifyColor
+            self.btnSpotify.isEnabled = true
         } else {
             self.btnSpotify.isEnabled = false
         }
@@ -96,6 +102,7 @@ class GroupBioView: UIViewController {
         // Bandcamp
         if(self.group.lien_bandcamp != ""){
             self.btnBandcamp.backgroundColor = self.bandcampColor
+            self.btnBandcamp.isEnabled = true
         } else {
             self.btnBandcamp.isEnabled = false
         }
@@ -103,6 +110,7 @@ class GroupBioView: UIViewController {
         // SoundCloud
         if(self.group.lien_soundcloud != ""){
             self.btnSoundcloud.backgroundColor = self.soundcloudColor
+            self.btnSoundcloud.isEnabled = true
         } else {
             self.btnSoundcloud.isEnabled = false
         }
@@ -110,13 +118,95 @@ class GroupBioView: UIViewController {
         // Apple
         if(self.group.lien_itunes != ""){
             self.btnApple.backgroundColor = self.appleColor
+            self.btnApple.isEnabled = true
         } else {
             self.btnApple.isEnabled = false
         }
     }
     
-    @IBAction func onClickSocialMedia(_ sender: UIButton) {
+    @IBAction func onClickFacebook(_ sender: Any) {
+        let link = self.group.lien_facebook
+        let toRemove = "http(s)?:\\/\\/(.)*(\\.)?facebook\\.com\\/"
+        let pageID = link.replacingOccurrences(of: toRemove, with: "", options: .regularExpression)
+        let app = "fb://profile/" + pageID
+        
+        UIApplication.tryURL(urls: [
+            app,
+            link
+        ])
     }
     
-
+    @IBAction func onClickTwitter(_ sender: Any) {
+        let link = self.group.lien_twitter
+        let toRemove = "http(s)?:\\/\\/(.)*(\\.)?twitter\\.com\\/"
+        let pageID = link.replacingOccurrences(of: toRemove, with: "", options: .regularExpression)
+        let app = "twitter://user?screen_name=" + pageID
+        
+        UIApplication.tryURL(urls: [
+            app,
+            link
+            ])
+    }
+    
+    @IBAction func onClickInstagram(_ sender: Any) {
+        let link = self.group.lien_instagram
+        let toRemove = "http(s)?:\\/\\/(.)*(\\.)?instagram\\.com\\/"
+        let pageID = link.replacingOccurrences(of: toRemove, with: "", options: .regularExpression)
+        let app = "instagram://user?username=" + pageID
+        
+        UIApplication.tryURL(urls: [
+            app,
+            link
+            ])
+    }
+    
+    @IBAction func onClickYoutube(_ sender: Any) {
+        let link = self.group.lien_youtube
+        let toRemove = "http(s)?:\\/\\/(.)*(\\.)?youtube\\.com\\/channel\\/"
+        let pageID = link.replacingOccurrences(of: toRemove, with: "", options: .regularExpression)
+        let app = "youtube://www.youtube.com/channel/" + pageID
+        
+        UIApplication.tryURL(urls: [
+            app,
+            link
+            ])
+    }
+    
+    @IBAction func onClickSpotify(_ sender: Any) {
+        let link = self.group.lien_spotify
+        let toRemove = "http(s)?:\\/\\/(.)*(\\.)?spotify\\.com\\/artist\\/"
+        let pageID = link.replacingOccurrences(of: toRemove, with: "", options: .regularExpression)
+        let app = "spotify:artist:" + pageID
+        
+        UIApplication.tryURL(urls: [
+            app,
+            link
+            ])
+    }
+    
+    @IBAction func onClickSoundcloud(_ sender: Any) {
+        let link = self.group.lien_soundcloud
+        let toRemove = "http(s)?:\\/\\/(.)*(\\.)?soundcloud\\.com\\/"
+        let pageID = link.replacingOccurrences(of: toRemove, with: "", options: .regularExpression)
+        let app = "soundcloud:users:" + pageID
+        
+        UIApplication.tryURL(urls: [
+            app,
+            link
+            ])
+    }
+    
+    @IBAction func onClickBandcamp(_ sender: Any) {
+        let link = self.group.lien_bandcamp
+        // let toRemove = "http(s)?:\\/\\/"
+        // var pageID = link.replacingOccurrences(of: toRemove, with: "", options: .regularExpression)
+        // let toRemove2 = "(\\.)bandcamp\\.com\\/"
+        // pageID = pageID.replacingOccurrences(of: toRemove2, with: "", options: .regularExpression)
+        
+        // let app = "x-bandcamp://user/" + pageID
+        
+        UIApplication.tryURL(urls: [
+            link
+            ])
+    }
 }

@@ -73,8 +73,16 @@ class SettingsController: UIViewController, UITextFieldDelegate{
                     
                     if(status){
                         let user = Mapper<Utilisateur>().map(JSONObject: resultat["user"])!
-                        user.est_connecte = true
-                        self.utilisateurDao?.write(obj: user, update: true)
+                        let userDB = self.utilisateurDao?.get(key: user.id_utilisateurs)
+                        
+                        if(userDB != nil){
+                            userDB?.email = user.email
+                            userDB?.api_ck = user.api_ck
+                            userDB?.login = user.login
+                            userDB?.est_connecte = true
+                            
+                            self.utilisateurDao?.write(obj: userDB!, update: true)
+                        }
                         
                         let titre = "Modification effectuée"
                         let msg = "Les modifications demandées ont bien été effectuées."

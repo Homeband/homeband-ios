@@ -27,7 +27,7 @@ class Album : Object,Mappable {
         id_albums <- (map["id_albums"], IntTransform())
         titre <- map["titre"]
         image <- map["image"]
-        date_sortie <- (map["date_sortie"], DateTransform())
+        date_sortie <- (map["date_sortie"], DateTimeTransform())
         est_actif <- (map["est_actif"], BooleanTransform())
         id_groupes <- (map["id_groupes"], IntTransform())
     }

@@ -43,11 +43,12 @@ class HomeController: UITableViewController{
         self.dateFormatter.dateFormat = "dd/MM/YYYY HH:mm"
     }
     
+    
     override func viewWillAppear(_ animated: Bool) {
         navigationItem.title = "Homeband"
         self.events = self.evenementDao.listByUser(id_utilisateurs: self.user.id_utilisateurs)
         tableView.reloadData()
-        
+        self.tabBarController?.tabBar.isHidden = false
     }
     
     // MARK: - Table view data source
@@ -148,6 +149,9 @@ class HomeController: UITableViewController{
             // Modification du titre de la vue et du bouton de retour
             destinationViewController.title = event.nom
             navigationItem.title = ""
+            
+            destinationViewController.tabBarController?.tabBar.isHidden = true
+            
             
             break
         default :

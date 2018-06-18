@@ -64,6 +64,14 @@
 	<string>Homeband utilise la localisation de votre téléphone pour trouver les groupes et les évènements proches de vous.</string>
 	<key>NSCalendarsUsageDescription</key>
 	<string>Nécessaire pour ajouter les évènement dans votre calendrier</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>twitter</string>
+		<string>fb</string>
+		<string>instagram</string>
+		<string>youtube</string>
+		<string>spotify</string>
+	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
 </dict>
