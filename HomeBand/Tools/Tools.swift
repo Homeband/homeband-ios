@@ -71,9 +71,10 @@ class Tools {
         }
         
         // Signature
-        sign = "$1$" + (AS + "+" + String(now) + "+" + CK).sha256()
+        sign = "$1$" + (AS + "+" + CK + "+" + String(now)).sha256()
         headers.updateValue(sign, forKey: "X-Homeband-SIGN")
         
+        headers.updateValue("user", forKey: "X-Homeband-TYPE")
         return headers
     }
     

@@ -44,6 +44,7 @@ class GroupViewController: UIViewController {
     private let titreDao = TitreDaoImpl()!
     private let utilisateurGroupeDao = UtilisateurGroupeDaoImpl()!
     
+    
     // Variables publiques
     var events:[Evenement]?
     var albums:[Album]?
@@ -137,9 +138,9 @@ class GroupViewController: UIViewController {
     private func addFavourite(){
         // Affichage du loader
         LoaderController.sharedInstance.showLoader()
-        
+        self.user = Tools.getConnectedUser()
         // Paramètres de l'API
-        let url = Tools.BASE_API_URL + "utilisateurs/" + String(user.id_utilisateurs) + "/groupes/" + String(group.id_groupes)
+        let url = Tools.BASE_API_URL + "utilisateurs/" + String(self.user!.id_utilisateurs) + "/groupes/" + String(self.group.id_groupes)
         let params:Parameters = [
             "get_groupe" : 0,
             "get_membres" : 0,
@@ -166,7 +167,7 @@ class GroupViewController: UIViewController {
                     // Ajout des éléments
                     //self.groupeDao.write(obj: self.group, update: true)
                     let user = Tools.getConnectedUser()
-                    self.utilisateurDao?.addGroup(id_utilisateurs: user!.id_utilisateurs, group: self.group)
+                    self.utilisateurDao?.addGroup(id_utilisateurs: user!.id_utilisateurs, group: Groupe(value: self.group))
                     self.groupeDao.write(obj: Groupe(value: self.group), update: true)
                     
                     for member in self.members {
@@ -229,14 +230,14 @@ class GroupViewController: UIViewController {
                 // Traitement du résultat
                 if(status){
                     let user = Tools.getConnectedUser()
+                    let id = self.group.id_groupes
+                    self.utilisateurDao?.deleteGroup(id_utilisateurs: user!.id_utilisateurs, id_groupes: id)
                     
-                    self.utilisateurDao?.deleteGroup(id_utilisateurs: user!.id_utilisateurs, id_groupes: self.group.id_groupes)
-                    
-                    if(!self.groupeDao.isUsed(key: self.group.id_groupes)){
+                    if(!self.groupeDao.isUsed(key: id)){
                         // Suppression des éléments
-                        self.titreDao.deleteByGroup(self.group.id_groupes)
-                        self.albumDao.deleteByGroup(self.group.id_groupes)
-                        self.membreDao.deleteByGroup(self.group.id_groupes)
+                        self.titreDao.deleteByGroup(id)
+                        self.albumDao.deleteByGroup(id)
+                        self.membreDao.deleteByGroup(id)
                     }
                     
                     // Modification de la variable de favoris
